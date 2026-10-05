@@ -147,6 +147,8 @@ const TRANSLATIONS = {
         "footer.view_site": "KyteView 官網",
         "footer.shelf_site": "KyteShelf 官網",
         "footer.rename_site": "KyteRename 官網",
+        "footer.terms": "服務條款",
+        "footer.privacy_policy": "隱私權政策",
         "footer.support": "支援信箱",
     },
 
@@ -293,6 +295,8 @@ const TRANSLATIONS = {
         "footer.view_site": "KyteView",
         "footer.shelf_site": "KyteShelf",
         "footer.rename_site": "KyteRename",
+        "footer.terms": "Terms of Service",
+        "footer.privacy_policy": "Privacy Policy",
         "footer.support": "Support Email",
     }
 };

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy 隱私權政策 - Kyte Suite</title>
+    <meta name="description" content="Kyte Suite 隱私權政策 (Privacy Policy) - 100% 本機離線處理，絕不上傳檔案，零隱私收集。">
+    <meta name="author" content="ais7896-hue">
+    <link rel="icon" type="image/x-icon" href="assets/kyteview.png">
+
+    <!-- Tailwind CSS & FontAwesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif;
+        }
+
+        .dark-glass {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .legal-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .legal-card:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- 導航列 -->
+    <nav class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-white/10 transition-all">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-sky-500 to-blue-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition">
+                    <i class="fa-solid fa-feather-pointed text-base"></i>
+                </div>
+                <div class="flex flex-col text-left">
+                    <span class="text-lg font-extrabold tracking-tight text-white leading-tight">Kyte Suite</span>
+                    <span class="text-[10px] font-semibold text-slate-400 tracking-wider">LEGAL CENTER</span>
+                </div>
+            </a>
+
+            <div class="flex items-center gap-4 text-xs font-semibold">
+                <a href="index.html" class="text-slate-300 hover:text-white transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span class="lang-zh">返回首頁</span>
+                    <span class="lang-en hidden">Home</span>
+                </a>
+                <a href="terms.html" class="text-slate-300 hover:text-indigo-400 transition">
+                    <span class="lang-zh">服務條款</span>
+                    <span class="lang-en hidden">Terms of Service</span>
+                </a>
+                <span class="text-indigo-400 font-bold border-b-2 border-indigo-500 pb-0.5">
+                    <span class="lang-zh">隱私政策</span>
+                    <span class="lang-en hidden">Privacy Policy</span>
+                </span>
+                <button id="lang-toggle-btn"
+                    class="px-2.5 py-1 rounded-lg bg-white/10 hover:bg-white/15 text-slate-200 border border-white/15 transition flex items-center gap-1.5 text-xs font-bold">
+                    <i class="fa-solid fa-globe text-indigo-400"></i>
+                    <span id="lang-btn-text">EN</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要內容區 -->
+    <main class="max-w-4xl mx-auto px-6 py-16 w-full">
+        <!-- 頂部標題 -->
+        <div class="text-center mb-12">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-400/20 text-indigo-400 text-xs font-bold mb-4">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span class="lang-zh">隱私保護承諾</span>
+                <span class="lang-en hidden">Data Protection Commitment</span>
+            </span>
+            <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+                <span class="lang-zh">隱私權政策</span>
+                <span class="lang-en hidden">Privacy Policy</span>
+            </h1>
+            <p class="text-slate-400 text-xs sm:text-sm mt-3">
+                <span class="lang-zh">生效日期：2026 年 10 月 5 日 ｜ 適用於 KyteView、KyteShelf、KyteRename</span>
+                <span class="lang-en hidden">Effective Date: October 5, 2026 | Applies to KyteView, KyteShelf, KyteRename</span>
+            </p>
+        </div>
+
+        <!-- 繁體中文內容 -->
+        <div class="lang-zh space-y-8 text-sm text-slate-300 leading-relaxed">
+            <div class="legal-card border-indigo-500/30 bg-indigo-950/20">
+                <h2 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-lock text-emerald-400"></i>
+                    <span>核心隱私承諾：100% 本機純離線運作</span>
+                </h2>
+                <p>
+                    Kyte Suite（包含 KyteView、KyteShelf 與 KyteRename，以下統稱「本軟體」或「我們」）極度重視您的個人隱私與數位主權。
+                    我們深知桌面檔案的敏感性，因此本軟體從底層架構上即設計為<strong>純本機離線運作工具</strong>。
+                </p>
+            </div>
+
+            <div class="legal-card space-y-3">
+                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">1</span>
+                    <span>零個人檔案上傳 (Zero Telemetry)</span>
+                </h3>
+                <p>
+                    您的所有文件內容、相片、影片、音訊、壓縮檔目錄樹、相片 EXIF 拍攝資訊、音樂 ID3 標籤、自黏便箋內容以及硬碟檔案路徑，<strong>完全在您個人電腦的本機記憶體（RAM）與 CPU/GPU 內處理</strong>。
+                </p>
+                <ul class="list-disc list-inside space-y-1 text-slate-400 pl-1">
+                    <li>本軟體絕不將您的任何個人檔案內容上傳至任何雲端伺服器。</li>
+                    <li>本軟體不包含任何第三方行為追蹤、監控探針（Telemetry）或數據分析 SDK。</li>
+                    <li>本軟體不會掃描、建構或向外傳送您的資料夾結構與個人敏感資訊。</li>
+                </ul>
+            </div>
+
+            <div class="legal-card space-y-3">
+                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">2</span>
+                    <span>唯一連網行為（僅限正式版序號驗證）</span>
+                </h3>
+                <p>
+                    當您購買正式版並在軟體中點擊「開通序號」或「解除綁定」時，系統會透過 HTTPS 加密連線傳送以下極低敏感度數據至 Cloudflare Worker 授權伺服器：
+                </p>
+                <div class="grid sm:grid-cols-2 gap-3 pt-1">
+                    <div class="p-3 rounded-xl bg-slate-900 border border-white/5">
+                        <div class="font-bold text-white text-xs mb-1">授權金鑰 (License Key)</div>
+                        <div class="text-xs text-slate-400">您購買時所取得的正版序號字串。</div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-slate-900 border border-white/5">
+                        <div class="font-bold text-white text-xs mb-1">匿名硬體指紋雜湊</div>
+                        <div class="text-xs text-slate-400">由 Windows MachineGuid 經單向 SHA-256 不可逆雜湊，無法反推電腦內容。</div>
+                    </div>
+                </div>
+                <p class="text-xs text-slate-400 pt-1">
+                    上述資訊僅用於防範序號遭盜用，並校驗「單組序號同時最多啟用 2 台個人裝置」之額度。完成開通後，本機會簽發離線加密憑證，日後在無網路環境下依然 100% 正常可用。
+                </p>
+            </div>
+
+            <div class="legal-card space-y-3">
+                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">3</span>
+                    <span>官方網站瀏覽資訊</span>
+                </h3>
+                <p>
+                    當您訪問 Kyte Suite 官方網站時，網站託管平台（GitHub Pages 與 Cloudflare CDN）可能會記錄標準網路請求標頭（包含瀏覽器類型、請求時間與來源 IP 位址），此為網際網路傳輸之必要基礎日誌。我們未在網站嵌入侵犯性之跨站廣告追蹤 Cookie。
+                </p>
+            </div>
+
+            <div class="legal-card space-y-3">
+                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">4</span>
+                    <span>聯絡我們</span>
+                </h3>
+                <p>
+                    若您對本隱私政策或個人資料處理有任何疑問，歡迎隨時透過客服信箱與我們聯繫：
+                    <a href="mailto:support@aisming.com" class="text-indigo-400 hover:underline font-bold">support@aisming.com</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- 英文內容 -->
+        <div class="lang-en hidden space-y-8 text-sm text-slate-300 leading-relaxed">
+            <div class="legal-card border-indigo-500/30 bg-indigo-950/20">
+                <h2 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-lock text-emerald-400"></i>
+                    <span>Core Privacy Commitment: 100% Local & Offline</span>
+                </h2>
+                <p>
+                    Kyte Suite (encompassing KyteView, KyteShelf, and KyteRename, collectively referred to as "the Software", "we", "us", or "our") is strictly dedicated to user privacy and digital sovereignty. 
+                    The Software is architected from the ground up as a <strong>strictly offline local desktop utility</strong>.
+                </p>
+            </div>
+
+            <div class="legal-card space-y-3">
+                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">1</span>
+                    <span>Zero Content Telemetry</span>
+                </h3>
+                <p>
+                    Your file contents, documents, images, video/audio streams, archive file trees, photo EXIF metadata, audio ID3 tags, sticky note text, and filesystem paths are processed <strong>strictly within your device's local memory (RAM) and processor (CPU/GPU)</strong>.
+                </p>
+                <ul class="list-disc list-inside space-y-1 text-slate-400 pl-1">
+                    <li>The Software never uploads, intercepts, scans, or transmits your personal files or folder contents to any cloud server.</li>
+                    <li>The Software contains zero user behavior analytics, spyware, or third-party telemetry tracking SDKs.</li>
+                    <li>The Software does not catalog or transmit your filesystem directory structure.</li>
+                </ul>
+            </div>
+
+            <div class="legal-card space-y-3">
+                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">2</span>
+                    <span>Information We Process (License Activation Only)</span>
+                </h3>
+                <p>
+                    When activating a commercial license key or releasing a device quota, the Software communicates with our Cloudflare Worker verification API over an encrypted HTTPS connection. The data transmitted is limited exclusively to:
+                </p>
+                <div class="grid sm:grid-cols-2 gap-3 pt-1">
+                    <div class="p-3 rounded-xl bg-slate-900 border border-white/5">
+                        <div class="font-bold text-white text-xs mb-1">License Key</div>
+                        <div class="text-xs text-slate-400">The alphanumeric string issued with your purchase.</div>
+                    </div>
+                    <div class="p-3 rounded-xl bg-slate-900 border border-white/5">
+                        <div class="font-bold text-white text-xs mb-1">Anonymized Hardware Fingerprint</div>
+                        <div class="text-xs text-slate-400">A one-way irreversible SHA-256 hash of the Windows MachineGuid.</div>
+                    </div>
+                </div>
+                <p class="text-xs text-slate-400 pt-1">
+                    This data is used solely to enforce the "maximum 2 concurrent devices per license" quota. Upon activation, an offline certificate is stored locally, allowing the Software to remain 100% usable without an active internet connection.
+                </p>
+            </div>
+
+            <div class="legal-card space-y-3">
+                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">3</span>
+                    <span>Website & Server Logs</span>
+                </h3>
+                <p>
+                    When visiting our official websites (hosted on GitHub Pages and Cloudflare CDN), standard server request logs (browser user agent, timestamps, and IP addresses) are generated by the hosting infrastructure. We do not deploy invasive cross-site advertising or tracking cookies.
+                </p>
+            </div>
+
+            <div class="legal-card space-y-3">
+                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">4</span>
+                    <span>Contact Us</span>
+                </h3>
+                <p>
+                    If you have any questions regarding this Privacy Policy or your data, please contact our support team at:
+                    <a href="mailto:support@aisming.com" class="text-indigo-400 hover:underline font-bold">support@aisming.com</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="bg-slate-950 text-slate-500 py-10 border-t border-white/10 text-xs text-center">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>© 2026 ais7896-hue. Kyte Suite All rights reserved.</div>
+            <div class="flex items-center gap-6">
+                <a href="terms.html" class="hover:text-slate-300 transition">
+                    <span class="lang-zh">服務條款</span>
+                    <span class="lang-en hidden">Terms of Service</span>
+                </a>
+                <a href="privacy.html" class="hover:text-slate-300 transition font-bold text-slate-400">
+                    <span class="lang-zh">隱私權政策</span>
+                    <span class="lang-en hidden">Privacy Policy</span>
+                </a>
+                <a href="mailto:support@aisming.com" class="hover:text-slate-300 transition">support@aisming.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 語言切換腳本 -->
+    <script>
+        let currentLang = 'zh_TW';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('kyte_suite_lang', lang);
+            document.documentElement.lang = lang === 'zh_TW' ? 'zh-TW' : 'en';
+
+            document.querySelectorAll('.lang-zh').forEach(el => el.classList.toggle('hidden', lang !== 'zh_TW'));
+            document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden', lang === 'zh_TW'));
+
+            const btn = document.getElementById('lang-btn-text');
+            if (btn) btn.textContent = lang === 'zh_TW' ? 'EN' : '繁中';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem('kyte_suite_lang');
+            if (saved && (saved === 'zh_TW' || saved === 'en_US')) {
+                setLanguage(saved);
+            } else {
+                const sysLang = navigator.language || '';
+                setLanguage(sysLang.toLowerCase().includes('zh') ? 'zh_TW' : 'en_US');
+            }
+
+            document.getElementById('lang-toggle-btn').addEventListener('click', () => {
+                setLanguage(currentLang === 'zh_TW' ? 'en_US' : 'zh_TW');
+            });
+        });
+    </script>
+</body>
+
+</html>
