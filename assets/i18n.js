@@ -138,6 +138,8 @@ const TRANSLATIONS = {
         "faq.a2": "絕對不會！Kyte Suite 全系列產品均為 100% 本機純離線運作工具。所有的預覽渲染、中繼資料抽取、暫存與重新命名作業均在您本機電腦的記憶體與 CPU/GPU 內完成，絕不連網傳輸您的任何檔案內容，隱私絕對安全。",
         "faq.q3": "如果公司電腦沒有管理員權限，可以使用綠色免安裝版嗎？",
         "faq.a3": "可以！各產品在官方發行頁面除了提供標準 Inno Setup 安裝檔之外，亦提供便攜免安裝綠色壓縮包，解壓縮後直接雙擊執行即可使用，無需管理員提權。",
+        "faq.q4": "購買正式版後享有什麼維護與更新保障？",
+        "faq.a4": "本商品為一次性買斷，享有一年內免費維護與 Bug 修復。若未來作業系統大型改版（如 Windows 升級）導致軟體需重構，新版本將另行販售。",
 
         "footer.slogan": "The Modern Windows Productivity Ecosystem",
         "footer.rights": "© 2026 ais7896-hue. All rights reserved. Designed with precision for Windows 10 & 11.",
@@ -282,6 +284,8 @@ const TRANSLATIONS = {
         "faq.a2": "Never! All Kyte Suite products run 100% offline on your local machine. All previewing, metadata extraction, staging, and renaming operations take place strictly within your local CPU/GPU and RAM. No telemetry or file data is ever transmitted over the network.",
         "faq.q3": "Can I use the portable edition without administrator privileges?",
         "faq.a3": "Yes! In addition to standard Inno Setup wizards, all applications provide portable zero-install ZIP packages. Simply extract and double-click to run without requiring admin elevation.",
+        "faq.q4": "What maintenance and update coverage is included with a license?",
+        "faq.a4": "Licenses are one-time perpetual purchases including one year of free maintenance and bug fixes. If future major operating system overhauls (such as major Windows version upgrades) necessitate substantial software refactoring, new major releases will be sold separately.",
 
         "footer.slogan": "The Modern Windows Productivity Ecosystem",
         "footer.rights": "© 2026 ais7896-hue. All rights reserved. Designed with precision for Windows 10 & 11.",
