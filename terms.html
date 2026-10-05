@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service 服務條款與授權協議 - Kyte Suite</title>
-    <meta name="description" content="Kyte Suite 服務條款與使用者授權協議 (Terms of Service / EULA) - 一次性買斷、2台個人裝置授權、一年免費維護保障。">
+    <title>Terms of Service 服務條款與使用者授權協議 - Kyte Suite</title>
+    <meta name="description" content="Kyte Suite 服務條款與使用者授權協議 (Terms of Service / EULA) - 一次性買斷、2台個人裝置授權、14天完整試用防衝動機制、一年免費維護保障、準據法與管轄約定。">
     <meta name="author" content="ais7896-hue">
     <link rel="icon" type="image/x-icon" href="assets/kyteview.png">
 
@@ -20,57 +20,86 @@
             font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif;
         }
 
-        .dark-glass {
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+        code, kbd {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .ambient-glow {
+            position: absolute;
+            width: 700px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(14, 165, 233, 0.05) 50%, rgba(2, 6, 23, 0) 75%);
+            filter: blur(80px);
+            pointer-events: none;
+            z-index: 0;
         }
 
         .legal-card {
-            background: rgba(15, 23, 42, 0.6);
+            background: rgba(15, 23, 42, 0.65);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 1.25rem;
             padding: 2rem;
-            transition: border-color 0.2s ease;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
 
         .legal-card:hover {
-            border-color: rgba(99, 102, 241, 0.3);
+            border-color: rgba(99, 102, 241, 0.35);
+            box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .quick-nav-link {
+            transition: all 0.2s ease;
+        }
+        .quick-nav-link:hover {
+            color: #818cf8;
+            padding-left: 0.5rem;
+        }
+
+        .doc-section {
+            scroll-margin-top: 5.5rem;
         }
     </style>
 </head>
 
-<body class="bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white min-h-screen flex flex-col justify-between">
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white min-h-screen flex flex-col justify-between relative overflow-x-hidden">
 
-    <!-- 導航列 -->
-    <nav class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-white/10 transition-all">
-        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <!-- 背景氛圍光效 -->
+    <div class="ambient-glow top-0 left-1/2 -translate-x-1/2"></div>
+    <div class="ambient-glow bottom-40 right-[-150px]"></div>
+
+    <!-- 頂部導航列 -->
+    <nav class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/85 border-b border-white/10 transition-all">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3 group">
-                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-sky-500 to-blue-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-sky-500 to-blue-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition">
                     <i class="fa-solid fa-feather-pointed text-base"></i>
                 </div>
                 <div class="flex flex-col text-left">
-                    <span class="text-lg font-extrabold tracking-tight text-white leading-tight">Kyte Suite</span>
-                    <span class="text-[10px] font-semibold text-slate-400 tracking-wider">LEGAL CENTER</span>
+                    <span class="text-lg font-black tracking-tight text-white leading-tight">Kyte Suite</span>
+                    <span class="text-[10px] font-semibold text-slate-400 tracking-wider">LEGAL & COMPLIANCE</span>
                 </div>
             </a>
 
-            <div class="flex items-center gap-4 text-xs font-semibold">
-                <a href="index.html" class="text-slate-300 hover:text-white transition flex items-center gap-1.5">
-                    <i class="fa-solid fa-arrow-left"></i>
+            <div class="flex items-center gap-3 sm:gap-5 text-xs font-semibold">
+                <a href="index.html" class="text-slate-300 hover:text-white transition flex items-center gap-1.5 px-2 py-1 rounded-lg hover:bg-white/5">
+                    <i class="fa-solid fa-arrow-left text-[11px]"></i>
                     <span class="lang-zh">返回首頁</span>
                     <span class="lang-en hidden">Home</span>
                 </a>
-                <span class="text-indigo-400 font-bold border-b-2 border-indigo-500 pb-0.5">
+                <span class="text-indigo-400 font-bold border-b-2 border-indigo-500 pb-0.5 px-1">
                     <span class="lang-zh">服務條款</span>
                     <span class="lang-en hidden">Terms of Service</span>
                 </span>
-                <a href="privacy.html" class="text-slate-300 hover:text-indigo-400 transition">
+                <a href="privacy.html" class="text-slate-300 hover:text-indigo-400 transition px-1">
                     <span class="lang-zh">隱私政策</span>
                     <span class="lang-en hidden">Privacy Policy</span>
                 </a>
                 <button id="lang-toggle-btn"
-                    class="px-2.5 py-1 rounded-lg bg-white/10 hover:bg-white/15 text-slate-200 border border-white/15 transition flex items-center gap-1.5 text-xs font-bold">
+                    class="px-2.5 py-1 rounded-lg bg-white/10 hover:bg-white/15 text-slate-200 border border-white/15 transition flex items-center gap-1.5 text-xs font-bold active:scale-95 shadow-sm">
                     <i class="fa-solid fa-globe text-indigo-400"></i>
                     <span id="lang-btn-text">EN</span>
                 </button>
@@ -78,183 +107,457 @@
         </div>
     </nav>
 
-    <!-- 主要內容區 -->
-    <main class="max-w-4xl mx-auto px-6 py-16 w-full">
-        <!-- 頂部標題 -->
+    <!-- 主體內容區塊 (雙欄佈局) -->
+    <main class="max-w-6xl mx-auto px-6 py-14 w-full relative z-10">
+
+        <!-- 頂部 Header -->
         <div class="text-center mb-12">
-            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-400/20 text-indigo-400 text-xs font-bold mb-4">
-                <i class="fa-solid fa-file-contract"></i>
-                <span class="lang-zh">授權與服務條款</span>
-                <span class="lang-en hidden">License & Service Terms</span>
-            </span>
-            <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
-                <span class="lang-zh">服務條款與使用者授權協議</span>
-                <span class="lang-en hidden">Terms of Service & EULA</span>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-400/25 text-indigo-400 text-xs font-bold mb-4 shadow-inner">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span class="lang-zh">正版使用者授權合約與權益條款 (EULA)</span>
+                <span class="lang-en hidden">End-User License Agreement & Service Terms</span>
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+                <span class="lang-zh">Kyte 軟體服務條款與授權協議</span>
+                <span class="lang-en hidden">Kyte Suite Terms of Service & EULA</span>
             </h1>
-            <p class="text-slate-400 text-xs sm:text-sm mt-3">
-                <span class="lang-zh">生效日期：2026 年 10 月 5 日 ｜ 適用於 KyteView、KyteShelf、KyteRename</span>
-                <span class="lang-en hidden">Effective Date: October 5, 2026 | Applies to KyteView, KyteShelf, KyteRename</span>
+            <p class="text-slate-400 text-xs sm:text-sm mt-3 flex items-center justify-center gap-2 flex-wrap">
+                <span class="px-2 py-0.5 rounded bg-slate-900 border border-white/10 font-mono text-slate-300">v2.1</span>
+                <span>•</span>
+                <span class="lang-zh">最後更新日期：2026 年 10 月 5 日 ｜ 適用於 KyteView、KyteShelf、KyteRename</span>
+                <span class="lang-en hidden">Last Updated: October 5, 2026 | Applies to KyteView, KyteShelf, KyteRename</span>
             </p>
         </div>
 
-        <!-- 繁體中文內容 -->
-        <div class="lang-zh space-y-8 text-sm text-slate-300 leading-relaxed">
-            <div class="legal-card border-indigo-500/30 bg-indigo-950/20">
-                <h2 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
-                    <i class="fa-solid fa-circle-info text-indigo-400"></i>
-                    <span>協議前言與接受條款</span>
-                </h2>
-                <p>
-                    歡迎使用 Kyte Suite（包含 KyteView、KyteShelf 與 KyteRename，以下統稱「本軟體」或「我們」）。
-                    在下載、安裝、啟用或購買本軟體前，請詳細閱讀本協議。當您完成安裝或付費購買授權金鑰時，即視為您已完整理解並同意受本協議所有條款之約束。
-                </p>
-            </div>
+        <div class="flex flex-col lg:flex-row gap-10 items-start">
 
-            <div class="legal-card space-y-3">
-                <h3 class="text-base font-bold text-white flex items-center gap-2">
-                    <span class="w-6 h-6 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">1</span>
-                    <span>軟體授權模式（一次性買斷制）</span>
-                </h3>
-                <ul class="list-disc list-inside space-y-2 text-slate-300 pl-1">
-                    <li>
-                        <strong>永久使用權 (Perpetual License)</strong>：本軟體為一次性買斷商品。購買後您享有該主要發行版本之永久使用權，無需支付任何按月或按年之強制訂閱費用。
-                    </li>
-                    <li>
-                        <strong>裝置授權額度</strong>：每組正版授權序號預設允許<strong>同時啟用最多 2 台個人 Windows 裝置</strong>（例如一台桌上型電腦與一台個人筆記型電腦），僅供合法購買者本人使用，不得分拆出租或轉讓第三方。
-                    </li>
-                    <li>
-                        <strong>換機自主轉移</strong>：軟體內建「解除綁定」功能。當您更換新電腦、升級硬體或重新安裝系統時，可在舊電腦自主釋放授權額度，並隨時於新電腦重新開通。
-                    </li>
-                </ul>
-            </div>
-
-            <div class="legal-card space-y-3 border-amber-500/30 bg-amber-950/10">
-                <h3 class="text-base font-bold text-amber-300 flex items-center gap-2">
-                    <span class="w-6 h-6 rounded-lg bg-amber-500/20 text-amber-300 flex items-center justify-center text-xs font-bold">2</span>
-                    <span>售後維護與重大改版政策（重要條款）</span>
-                </h3>
-                <div class="p-3 rounded-xl bg-slate-900/80 border border-amber-400/20 text-slate-200 text-xs sm:text-sm font-semibold">
-                    「本商品為一次性買斷，享有一年內免費維護與 Bug 修復。若未來作業系統大型改版（如 Windows 升級）導致軟體需重構，新版本將另行販售。」
+            <!-- 側邊章節目錄 (Sticky Sidebar) -->
+            <aside class="w-full lg:w-64 flex-shrink-0 lg:sticky lg:top-24 bg-slate-900/60 p-5 rounded-2xl border border-white/10 backdrop-blur-md">
+                <div class="text-[11px] font-extrabold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-list-ul text-indigo-400"></i>
+                    <span class="lang-zh">條款章節導覽</span>
+                    <span class="lang-en hidden">Index of Clauses</span>
                 </div>
-                <ul class="list-disc list-inside space-y-2 text-slate-300 pl-1 text-xs sm:text-sm">
-                    <li>
-                        <strong>一年免費維護期</strong>：自授權開通日起算<strong>一年內</strong>，您享有免費之軟體功能維護、次版本功能更新、演算法效能優化與 Bug 修復支援。
-                    </li>
-                    <li>
-                        <strong>作業系統升級與相容性</strong>：本軟體保證於購買當時所明列相容之 Windows 版本環境中穩定運行。若未來微軟發布重大作業系統升級（例如 Windows 架構級升級或底層 API 棄用），導致現有軟體核心必須進行架構級重構與重新開發時，新世代重構版本將作為獨立全新產品另行販售。既有版本可繼續於原支援之作業系統中永久使用。
-                    </li>
-                </ul>
-            </div>
-
-            <div class="legal-card space-y-3">
-                <h3 class="text-base font-bold text-white flex items-center gap-2">
-                    <span class="w-6 h-6 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">3</span>
-                    <span>智慧財產權與使用規範</span>
-                </h3>
-                <ul class="list-disc list-inside space-y-1.5 text-slate-300 pl-1">
-                    <li>本軟體所有原始碼、編譯執行檔、介面設計、圖示美術資產及相關文件，其著作權與智慧財產權均屬原作者 ais7896-hue 所有。</li>
-                    <li>使用者不得對本軟體執行反向工程（Reverse Engineering）、反編譯（Decompile）、拆解二進位代碼，或規避/竄改序號驗證模組。</li>
-                    <li>嚴禁公開散布未經授權之破解版本、公開張貼分享正版序號或從事非法轉售圖利行為。</li>
-                </ul>
-            </div>
-
-            <div class="legal-card space-y-3">
-                <h3 class="text-base font-bold text-white flex items-center gap-2">
-                    <span class="w-6 h-6 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">4</span>
-                    <span>免責聲明與責任限制 (Disclaimer of Warranties)</span>
-                </h3>
-                <p>
-                    本軟體依「現況 (AS-IS)」提供。儘管開發團隊導入了原子快照日誌、DAG 拓撲破圈換名防覆蓋與置物架防吞噬機制以確保最高安全性，
-                    但在不可抗力、作業系統異常關機、本機硬碟壞軌或第三方防毒軟體暴力阻擋等極端情境下，使用者仍應落實重要工作資料之定期備份習慣。
-                </p>
-                <p class="text-xs text-slate-400">
-                    在適用法律允許的最大範圍內，開發者對因使用或無法使用本軟體所產生之任何衍生性、間接性或附隨損失不承擔賠償責任；且開發者承擔之累計賠償上限，無論在任何情況下皆不超過使用者實際支付予本軟體之授權購買總額。
-                </p>
-            </div>
-        </div>
-
-        <!-- 英文內容 -->
-        <div class="lang-en hidden space-y-8 text-sm text-slate-300 leading-relaxed">
-            <div class="legal-card border-indigo-500/30 bg-indigo-950/20">
-                <h2 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
-                    <i class="fa-solid fa-circle-info text-indigo-400"></i>
-                    <span>Preamble & Agreement Acceptance</span>
-                </h2>
-                <p>
-                    Welcome to Kyte Suite (encompassing KyteView, KyteShelf, and KyteRename, collectively referred to as "the Software", "we", "us", or "our").
-                    Please review this Agreement carefully before downloading, installing, or purchasing a license key. By installing or purchasing the Software, you confirm that you have read, understood, and agreed to be legally bound by all terms in this Agreement.
-                </p>
-            </div>
-
-            <div class="legal-card space-y-3">
-                <h3 class="text-base font-bold text-white flex items-center gap-2">
-                    <span class="w-6 h-6 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">1</span>
-                    <span>Licensing Model (One-Time Perpetual Purchase)</span>
-                </h3>
-                <ul class="list-disc list-inside space-y-2 text-slate-300 pl-1">
-                    <li>
-                        <strong>Perpetual License</strong>: The Software is sold strictly on a one-time perpetual purchase basis. You are granted perpetual rights to use the purchased major edition without mandatory recurring monthly or annual subscription fees.
-                    </li>
-                    <li>
-                        <strong>Device Quota</strong>: Each valid commercial license permits concurrent activation on up to <strong>two (2) personal Windows devices</strong> owned and operated exclusively by the individual licensee (e.g., one primary desktop and one personal laptop). Sub-licensing or renting to third parties is prohibited.
-                    </li>
-                    <li>
-                        <strong>Self-Service License Migration</strong>: The Software includes a built-in "Deactivate License" feature in the settings panel, allowing users to voluntarily release device quota and transfer the license to a replacement machine upon hardware upgrades or OS reinstalls.
-                    </li>
-                </ul>
-            </div>
-
-            <div class="legal-card space-y-3 border-amber-500/30 bg-amber-950/10">
-                <h3 class="text-base font-bold text-amber-300 flex items-center gap-2">
-                    <span class="w-6 h-6 rounded-lg bg-amber-500/20 text-amber-300 flex items-center justify-center text-xs font-bold">2</span>
-                    <span>Maintenance & Major OS Overhauls (Core Clause)</span>
-                </h3>
-                <div class="p-3 rounded-xl bg-slate-900/80 border border-amber-400/20 text-slate-200 text-xs sm:text-sm font-semibold">
-                    "Licenses are one-time perpetual purchases including one year of free maintenance and bug fixes. If future major operating system overhauls (such as major Windows version upgrades) necessitate substantial software refactoring, new major releases will be sold separately."
+                <nav class="space-y-1.5 text-xs font-medium text-slate-400">
+                    <a href="#sec-preamble" class="quick-nav-link block py-1.5">
+                        <span class="lang-zh">前言與協議接受</span>
+                        <span class="lang-en hidden">Preamble & Acceptance</span>
+                    </a>
+                    <a href="#sec-license" class="quick-nav-link block py-1.5">
+                        <span class="lang-zh">1. 一次性買斷與裝置授權</span>
+                        <span class="lang-en hidden">1. Perpetual License & Devices</span>
+                    </a>
+                    <a href="#sec-maintenance" class="quick-nav-link block py-1.5 text-amber-300 font-semibold">
+                        <span class="lang-zh">2. 售後維護與重大改版政策</span>
+                        <span class="lang-en hidden">2. Maintenance & OS Overhauls</span>
+                    </a>
+                    <a href="#sec-trial-refund" class="quick-nav-link block py-1.5 text-emerald-300 font-semibold">
+                        <span class="lang-zh">3. 免費試用與退款爭議防範</span>
+                        <span class="lang-en hidden">3. Free Trial & Refund Policy</span>
+                    </a>
+                    <a href="#sec-ip" class="quick-nav-link block py-1.5">
+                        <span class="lang-zh">4. 智慧財產權與使用規範</span>
+                        <span class="lang-en hidden">4. Intellectual Property</span>
+                    </a>
+                    <a href="#sec-disclaimer" class="quick-nav-link block py-1.5">
+                        <span class="lang-zh">5. 免責聲明與責任上限</span>
+                        <span class="lang-en hidden">5. Disclaimer & Liability</span>
+                    </a>
+                    <a href="#sec-jurisdiction" class="quick-nav-link block py-1.5 text-sky-300 font-semibold">
+                        <span class="lang-zh">6. 準據法與第一審管轄法院</span>
+                        <span class="lang-en hidden">6. Governing Law & Jurisdiction</span>
+                    </a>
+                    <a href="#sec-contact" class="quick-nav-link block py-1.5">
+                        <span class="lang-zh">7. 條款修訂與聯繫管道</span>
+                        <span class="lang-en hidden">7. Amendments & Contact</span>
+                    </a>
+                </nav>
+                <div class="mt-6 pt-4 border-t border-white/10 text-[11px] text-slate-500 leading-relaxed">
+                    <span class="lang-zh">請妥善保管您的授權序號，切勿於公開社群公開張貼。</span>
+                    <span class="lang-en hidden">Keep your license keys secure and never share them publicly.</span>
                 </div>
-                <ul class="list-disc list-inside space-y-2 text-slate-300 pl-1 text-xs sm:text-sm">
-                    <li>
-                        <strong>One-Year Complimentary Maintenance</strong>: Commencing from the initial activation date, users are entitled to <strong>one (1) full year</strong> of free functional maintenance, minor feature enhancements, optimization, and bug fix updates.
-                    </li>
-                    <li>
-                        <strong>Operating System Overhauls</strong>: The Software is engineered and warranted for stability on the Windows versions officially designated as supported at the time of purchase. If a future major operating system overhaul (such as architectural Windows changes or fundamental API deprecations) requires extensive software refactoring or rewritten core modules, subsequent new generations will be distributed as distinct paid releases. Purchased versions remain perpetually usable on their originally supported operating system configurations.
-                    </li>
-                </ul>
-            </div>
+            </aside>
 
-            <div class="legal-card space-y-3">
-                <h3 class="text-base font-bold text-white flex items-center gap-2">
-                    <span class="w-6 h-6 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">3</span>
-                    <span>Intellectual Property & Restrictions</span>
-                </h3>
-                <ul class="list-disc list-inside space-y-1.5 text-slate-300 pl-1">
-                    <li>All source code, compiled binaries, user interfaces, branding, visual artwork, and documentation remain the exclusive intellectual property of ais7896-hue.</li>
-                    <li>You shall not decompile, reverse engineer, disassemble, or tamper with the Software's activation verification modules.</li>
-                    <li>Unauthorized sharing, redistributing cracked editions, or reselling licenses is strictly prohibited.</li>
-                </ul>
-            </div>
+            <!-- 右側詳細條款主體 -->
+            <div class="flex-1 w-full space-y-8">
 
-            <div class="legal-card space-y-3">
-                <h3 class="text-base font-bold text-white flex items-center gap-2">
-                    <span class="w-6 h-6 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xs">4</span>
-                    <span>Disclaimer of Warranties & Limitation of Liability</span>
-                </h3>
-                <p>
-                    The Software is provided on an "AS-IS" and "AS-AVAILABLE" basis. While the development team has engineered robust guardrails—including atomic transaction journaling, cycle-free DAG topology renaming, and staging protection—users are responsible for maintaining customary data backups.
-                </p>
-                <p class="text-xs text-slate-400">
-                    To the maximum extent permitted by applicable law, the developer disclaims liability for any indirect, special, or consequential damages. In no event shall the developer's aggregate liability exceed the actual purchase price paid by the user for the license.
-                </p>
+                <!-- 繁體中文內容 -->
+                <div class="lang-zh space-y-8 text-sm text-slate-300 leading-relaxed">
+
+                    <!-- 前言 -->
+                    <section id="sec-preamble" class="doc-section legal-card border-indigo-500/40 bg-indigo-950/20">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-8 h-8 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-sm">
+                                <i class="fa-solid fa-file-signature"></i>
+                            </span>
+                            <h2 class="text-lg font-bold text-white">協議前言與接受條款</h2>
+                        </div>
+                        <p class="leading-relaxed">
+                            歡迎使用 Kyte Suite（包含 KyteView、KyteShelf 與 KyteRename 系列產品，以下簡稱「本軟體」或「我們」）。
+                            本《服務條款與使用者授權協議》（以下簡稱「本協議」）係由您（以下簡稱「使用者」或「授權人」）與本軟體著作權人 ais7896-hue 之間所訂立之具法律拘束力合約。
+                        </p>
+                        <p class="mt-3 text-xs text-slate-400 leading-relaxed">
+                            當您自官方網站或認可管道下載、安裝、啟用、付費購買或以任何形式使用本軟體時，即表示您已完整閱讀、理解並無保留同意接受本協議之全部內容。若您不同意本協議任何條款，請立即停止安裝並完全移除本軟體。
+                        </p>
+                    </section>
+
+                    <!-- 1. 軟體授權模式 -->
+                    <section id="sec-license" class="doc-section legal-card space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-black text-sm">01</span>
+                            <h3 class="text-base font-bold text-white">軟體授權模式（一次性買斷制）</h3>
+                        </div>
+                        <ul class="space-y-3 pl-1">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check-circle text-indigo-400 text-xs mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-white">永久使用權 (Perpetual License)</strong>：本軟體採<strong>一次性買斷制</strong>銷售。付費取得序號後，您享有該發行版本之永久使用權利，不收取任何週期性按月或按年強制續訂費用。
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check-circle text-indigo-400 text-xs mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-white">雙裝置啟用額度</strong>：每組正版個人授權序號，允許<strong>同時開通並綁定最多 2 台個人 Windows 裝置</strong>（例如：一台工作桌上型電腦與一台個人外出筆記型電腦），僅限購買者本人日常作業使用，嚴禁出租、借調、轉讓予第三人或於公用電腦集體共用。
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check-circle text-indigo-400 text-xs mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-white">換機自主轉移</strong>：軟體內建「解除綁定」功能。當您升級電腦硬體、更換主機板或重灌 Windows 系統時，可於舊電腦設定面板自主釋放授權額度，並隨時於新裝置重新輸入序號開通。
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- 2. 售後維護與重大改版政策 -->
+                    <section id="sec-maintenance" class="doc-section legal-card space-y-4 border-amber-500/40 bg-amber-950/15">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center font-black text-sm">02</span>
+                            <h3 class="text-base font-bold text-amber-200">售後維護與重大改版政策（核心權益條款）</h3>
+                        </div>
+                        
+                        <div class="p-4 rounded-xl bg-slate-900/90 border border-amber-400/30 text-slate-100 text-xs sm:text-sm font-semibold shadow-inner">
+                            <i class="fa-solid fa-triangle-exclamation text-amber-400 mr-1.5"></i>
+                            「本商品為一次性買斷，享有一年內免費維護與 Bug 修復。若未來作業系統大型改版（如 Windows 升級）導致軟體需重構，新版本將另行販售。」
+                        </div>
+
+                        <ul class="space-y-3 pl-1 text-xs sm:text-sm">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-wrench text-amber-400 text-xs mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-slate-100">一年免費維護服務</strong>：自授權碼開通日起算<strong>完整一年（365天）</strong>內，使用者享有軟體常態維護、問題回報排解、Bug 修復更新以及既有核心功能微幅演化升級。
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-arrows-split-up-and-left text-amber-400 text-xs mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-slate-100">作業系統巨幅更迭與架構重構</strong>：本軟體保證於銷售當下官方宣告相容之 Windows 版本穩定運作。若未來微軟公司發布架構級 Windows 系統改版、棄用核心 API 或顛覆底層顯示管線，致使本軟體需重新編寫核心架構進行大規模重構（Refactoring），該重構版本將視為全新世代產品獨立計費販售；既有版本將持續保留於原有支援作業系統之永久執行權利。
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- 3. 免費試用、付費機制與退款政策（新增強化） -->
+                    <section id="sec-trial-refund" class="doc-section legal-card space-y-4 border-emerald-500/40 bg-emerald-950/15">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center font-black text-sm">03</span>
+                            <h3 class="text-base font-bold text-emerald-200">免費試用機制與退款政策（爭議防範原則）</h3>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-900/90 border border-emerald-400/30 text-slate-100 text-xs sm:text-sm leading-relaxed">
+                            <div class="font-bold text-emerald-300 mb-1 flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>強烈建議：購買前請務必善用 14 天全功能無限制免費試用</span>
+                            </div>
+                            為保障您的消費權益並降低衝動購買後的相容性疑慮，Kyte Suite 各軟體均提供<strong>完整 14 天免費試用期</strong>。試用期間無任何功能閹割或浮水印限制，與正式專業版享有完全相同的極速體驗與硬體效能。
+                        </div>
+
+                        <ul class="space-y-3 pl-1 text-xs sm:text-sm">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-laptop text-emerald-400 text-xs mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-slate-100">系統與硬體相容性先行確認</strong>：因 Windows PC 硬體組態、多螢幕 DPI 縮放、防毒軟體安全防禦層級各異，<strong>條款強烈要求使用者在掏款購買前，務必先下載免費試用版</strong>於您的目標電腦進行安裝實測，充分確認功能與日常工作流程相容。
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-receipt text-emerald-400 text-xs mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-slate-100">數位商品無形交付與退款限制</strong>：本軟體授權序號屬《消費者保護法》第十九條第二項及《通訊交易解除權合理例外情事適用準則》所明定之<strong>「非以有形媒介提供之數位內容或一經提供即為完成之線上服務」</strong>。序號一經系統核發、發送至買方電子郵件信箱或開通啟用，即已完成線上給付，依法<strong>不再享有鑑賞期猶豫與任意解約退費權利</strong>。
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-bug text-emerald-400 text-xs mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-slate-100">重大瑕疵例外專案審查</strong>：若購買後於一年維護期內發生經官方工程團隊確認屬軟體本身無法修復之嚴重核心相容性阻斷，且經客服技術排查仍無法解決者，得檢具系統診斷紀錄檔向 support@aisming.com 提出專案退款審查；審查通過並退款後，該授權序號將永久自伺服器廢止失效。
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- 4. 智慧財產權與使用規範 -->
+                    <section id="sec-ip" class="doc-section legal-card space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-black text-sm">04</span>
+                            <h3 class="text-base font-bold text-white">智慧財產權保護與反盜版規範</h3>
+                        </div>
+                        <ul class="space-y-2 text-xs sm:text-sm pl-1">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-copyright text-indigo-400 text-xs mt-1 flex-shrink-0"></i>
+                                <span>本軟體所有演算法架構、原子事務邏輯、介面視覺設計、圖示美術資產及手冊文案，其智慧財產權均受中華民國著作權法與國際著作權公約保護，專屬於開發者 ais7896-hue 所有。</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-ban text-rose-400 text-xs mt-1 flex-shrink-0"></i>
+                                <span>使用者不得對本軟體執行反向編譯（Decompile）、反組譯（Disassemble）、破解授權演算法、修改二進位執行檔或繞過安全金鑰機制。</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-ban text-rose-400 text-xs mt-1 flex-shrink-0"></i>
+                                <span>嚴禁於拍賣網站、社群群組、論壇等處公開張貼序號、私下合購倒賣、或製作及散播破解補丁，違者開發者保留依法追究民事損害賠償與刑事責任之一切法律權利。</span>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- 5. 免責聲明與責任上限 -->
+                    <section id="sec-disclaimer" class="doc-section legal-card space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-black text-sm">05</span>
+                            <h3 class="text-base font-bold text-white">免責聲明與責任限制 (Disclaimer of Warranties)</h3>
+                        </div>
+                        <p class="text-xs sm:text-sm leading-relaxed">
+                            本軟體係依「現況 (AS-IS)」提供。儘管開發團隊在 KyteView 搭載了零阻塞執行緒防卡死架構、在 KyteShelf 部署了三層防吞噬檔案保全機制、在 KyteRename 建立了原子快照與 DAG 拓撲破圈換名演算法，但在面臨作業系統藍屏崩潰、硬碟壞軌、極端勒索防護軟體直接刪檔或不可抗力天災等非本軟體可控情境下，使用者平時仍應落實核心資料獨立多重備份之安全準則。
+                        </p>
+                        <p class="text-xs text-slate-400 leading-relaxed bg-slate-900/60 p-3.5 rounded-xl border border-white/5">
+                            在適用法規允許之最大限度內，開發者就使用者因安裝或使用本軟體所產生之任何間接損害、懲罰性損害、預期營業利益之損失或資料損毀，概不承擔實質賠償責任。開發者對使用者之全額累計民事賠償責任上限，於任何情況下皆不得逾越使用者實際購買本軟體所支付之授權金總額。
+                        </p>
+                    </section>
+
+                    <!-- 6. 準據法與管轄管區（使用者特別要求強化） -->
+                    <section id="sec-jurisdiction" class="doc-section legal-card space-y-4 border-sky-500/40 bg-sky-950/15">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-xl bg-sky-500/20 text-sky-300 flex items-center justify-center font-black text-sm">06</span>
+                            <h3 class="text-base font-bold text-sky-200">準據法與第一審管轄法院（爭議處理解決）</h3>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900/90 border border-sky-400/30 text-slate-100 text-xs sm:text-sm font-semibold shadow-inner">
+                            <i class="fa-solid fa-gavel text-sky-400 mr-1.5"></i>
+                            「本條款之解釋與適用，均依中華民國法律為準據法；因本條款或使用本軟體所生之爭議，雙方合意以臺灣臺中地方法院為第一審管轄法院。」
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            本協議之效力、解釋、執行與衍生之權利義務關係，均完全以<strong>中華民國（臺灣）之法律</strong>為準據法。若日後因本授權條款之解釋、違反、履行或因使用本軟體而引發任何民事爭訟時，甲乙雙方本於誠信原則優先協商；若協商不成涉訟，雙方合意以<strong>臺灣臺中地方法院</strong>為第一審專屬管轄法院。
+                        </p>
+                    </section>
+
+                    <!-- 7. 條款修訂與聯繫管道 -->
+                    <section id="sec-contact" class="doc-section legal-card space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-black text-sm">07</span>
+                            <h3 class="text-base font-bold text-white">條款修訂與法律諮詢管道</h3>
+                        </div>
+                        <p class="text-xs sm:text-sm leading-relaxed">
+                            開發團隊保留於必要時依法修訂本條款之權利，更新後之條款將即時公告於本官方網站，並註記最後修訂版本與生效日期。若您在條款更新後持續使用本軟體或進行序號開通，即視同接受修訂後之條款約束。
+                        </p>
+                        <div class="pt-2 flex items-center gap-3 text-xs text-slate-300">
+                            <i class="fa-solid fa-envelope text-indigo-400 text-sm"></i>
+                            <span>條款諮詢或企業客製授權需求：</span>
+                            <a href="mailto:support@aisming.com" class="text-indigo-400 hover:text-indigo-300 underline font-mono font-semibold">support@aisming.com</a>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- 英文內容 (English Content) -->
+                <div class="lang-en hidden space-y-8 text-sm text-slate-300 leading-relaxed">
+
+                    <!-- Preamble -->
+                    <section id="sec-preamble" class="doc-section legal-card border-indigo-500/40 bg-indigo-950/20">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-8 h-8 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-sm">
+                                <i class="fa-solid fa-file-signature"></i>
+                            </span>
+                            <h2 class="text-lg font-bold text-white">Preamble & Agreement Acceptance</h2>
+                        </div>
+                        <p class="leading-relaxed">
+                            Welcome to Kyte Suite (encompassing KyteView, KyteShelf, and KyteRename, collectively referred to as "the Software", "we", "us", or "our").
+                            This Terms of Service and End-User License Agreement ("Agreement") forms a legally binding contract between you ("User" or "Licensee") and the author ais7896-hue ("Licensor").
+                        </p>
+                        <p class="mt-3 text-xs text-slate-400 leading-relaxed">
+                            By downloading, installing, activating, purchasing a license, or otherwise using the Software, you acknowledge that you have read, understood, and unequivocally agreed to all terms herein. If you disagree with any portion of this Agreement, immediately discontinue installation and remove the Software.
+                        </p>
+                    </section>
+
+                    <!-- 1. Licensing Model -->
+                    <section id="sec-license" class="doc-section legal-card space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-black text-sm">01</span>
+                            <h3 class="text-base font-bold text-white">Licensing Model (One-Time Perpetual Purchase)</h3>
+                        </div>
+                        <ul class="space-y-3 pl-1">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check-circle text-indigo-400 text-xs mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-white">Perpetual License Rights</strong>: The Software is sold strictly on a <strong>one-time perpetual purchase basis</strong>. You obtain lifetime usage rights for the purchased release edition without mandatory monthly or annual recurring subscription fees.
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check-circle text-indigo-400 text-xs mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-white">Dual-Device Quota</strong>: Each genuine personal license authorizes simultaneous activation on up to <strong>two (2) personal Windows devices</strong> (e.g., one primary workstation and one personal laptop) operated solely by the original licensee. Sublicensing, renting, or public workstation pooling is prohibited.
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check-circle text-indigo-400 text-xs mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-white">Self-Service Machine Migration</strong>: Built-in "Deactivate Device" functionality in the Preferences panel allows users to release device quota before upgrading hardware, switching machines, or reinstalling Windows, seamlessly rebinding to new setups.
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- 2. Maintenance & OS Overhauls -->
+                    <section id="sec-maintenance" class="doc-section legal-card space-y-4 border-amber-500/40 bg-amber-950/15">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center font-black text-sm">02</span>
+                            <h3 class="text-base font-bold text-amber-200">Maintenance & Major OS Overhauls (Core Clause)</h3>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-900/90 border border-amber-400/30 text-slate-100 text-xs sm:text-sm font-semibold shadow-inner">
+                            <i class="fa-solid fa-triangle-exclamation text-amber-400 mr-1.5"></i>
+                            "Licenses are one-time perpetual purchases including one year of free maintenance and bug fixes. If future major operating system overhauls (such as major Windows version upgrades) necessitate substantial software refactoring, new major releases will be sold separately."
+                        </div>
+
+                        <ul class="space-y-3 pl-1 text-xs sm:text-sm">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-wrench text-amber-400 text-xs mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-slate-100">One-Year Complimentary Maintenance</strong>: Commencing from initial key activation, users receive <strong>one (1) full year (365 days)</strong> of software functional maintenance, bug fixes, algorithmic stability refinements, and routine evolutionary patches free of charge.
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-arrows-split-up-and-left text-amber-400 text-xs mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-slate-100">Operating System Overhauls & Structural Refactoring</strong>: The Software is engineered and warranted for stability on Windows environments officially supported at the time of purchase. If future major OS transitions (such as core Windows architecture changes or fundamental API deprecations) require total refactoring and redevelopment of the underlying codebase, subsequent next-generation releases will be distributed as distinct paid products. Purchased versions retain perpetual utility on their originally supported operating system configurations.
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- 3. Free Trial & Refund Policy (Enhanced) -->
+                    <section id="sec-trial-refund" class="doc-section legal-card space-y-4 border-emerald-500/40 bg-emerald-950/15">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center font-black text-sm">03</span>
+                            <h3 class="text-base font-bold text-emerald-200">Free Trial Mechanism & Refund Policy (Dispute Mitigation)</h3>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-900/90 border border-emerald-400/30 text-slate-100 text-xs sm:text-sm leading-relaxed">
+                            <div class="font-bold text-emerald-300 mb-1 flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Strong Recommendation: Utilize the 14-Day Full-Featured Free Trial Prior to Purchase</span>
+                            </div>
+                            To protect consumer confidence and minimize impulse-purchase remorse, every application in the Kyte Suite offers a <strong>comprehensive 14-day free trial</strong>. The trial is completely unrestricted with no feature watermarks, identical in performance to the commercial release.
+                        </div>
+
+                        <ul class="space-y-3 pl-1 text-xs sm:text-sm">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-laptop text-emerald-400 text-xs mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-slate-100">Prior Verification of Hardware Compatibility</strong>: Because PC configurations, multi-display DPI scales, and endpoint security suites differ substantially, <strong>these Terms explicitly require prospective buyers to download and test the trial version first</strong> to verify system compatibility and workflow fit before transacting.
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-receipt text-emerald-400 text-xs mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-slate-100">Digital Delivery & Refund Exemption</strong>: Software license keys constitute <strong>intangible digital content delivered immediately via electronic means</strong>. Under relevant consumer protection regulations governing online services and digital content, once a license key has been generated, emailed, or activated, service fulfillment is complete and standard cool-off statutory cancellation/refund rights no longer apply.
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-bug text-emerald-400 text-xs mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-slate-100">Critical Defect Review</strong>: In the rare event of a severe, unresolvable technical fault verified by our engineering team within the one-year maintenance window, users may submit system diagnostic dumps to support@aisming.com for case-by-case review. Upon approval of a refund, the associated license key will be permanently revoked on authentication servers.
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- 4. Intellectual Property -->
+                    <section id="sec-ip" class="doc-section legal-card space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-black text-sm">04</span>
+                            <h3 class="text-base font-bold text-white">Intellectual Property Rights & Anti-Piracy</h3>
+                        </div>
+                        <ul class="space-y-2 text-xs sm:text-sm pl-1">
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-copyright text-indigo-400 text-xs mt-1 flex-shrink-0"></i>
+                                <span>All algorithmic architectures, atomic transaction engines, graphical designs, icons, assets, and manual copies remain the exclusive intellectual property of ais7896-hue, protected under copyright laws and international treaties.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-ban text-rose-400 text-xs mt-1 flex-shrink-0"></i>
+                                <span>You shall not decompile, disassemble, reverse engineer, patch cryptographic checks, or circumvent activation verification mechanisms.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fa-solid fa-ban text-rose-400 text-xs mt-1 flex-shrink-0"></i>
+                                <span>Publicly distributing commercial keys, sharing cracked binaries, or organizing unauthorized group buys is strictly forbidden. The Licensor reserves all legal remedies to pursue damages.</span>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- 5. Disclaimer & Liability -->
+                    <section id="sec-disclaimer" class="doc-section legal-card space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-black text-sm">05</span>
+                            <h3 class="text-base font-bold text-white">Disclaimer of Warranties & Limitation of Liability</h3>
+                        </div>
+                        <p class="text-xs sm:text-sm leading-relaxed">
+                            The Software is supplied strictly on an "AS-IS" and "AS-AVAILABLE" basis. While resilient safeguards—such as non-blocking threading in KyteView, three-tier staging preservation in KyteShelf, and atomic snapshot DAG cycle-breakers in KyteRename—have been implemented, users must maintain independent regular data backups against OS crashes, hardware drive decay, or hyper-aggressive security software.
+                        </p>
+                        <p class="text-xs text-slate-400 leading-relaxed bg-slate-900/60 p-3.5 rounded-xl border border-white/5">
+                            To the fullest extent sanctioned by applicable law, the Licensor shall not be held liable for indirect, incidental, or consequential damages, including loss of profits or business interruption. In all circumstances, the cumulative liability of the Licensor shall never exceed the actual license fee paid by the User.
+                        </p>
+                    </section>
+
+                    <!-- 6. Governing Law & Taichung Jurisdiction (Explicit Clause) -->
+                    <section id="sec-jurisdiction" class="doc-section legal-card space-y-4 border-sky-500/40 bg-sky-950/15">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-xl bg-sky-500/20 text-sky-300 flex items-center justify-center font-black text-sm">06</span>
+                            <h3 class="text-base font-bold text-sky-200">Governing Law & Taichung District Court Jurisdiction</h3>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900/90 border border-sky-400/30 text-slate-100 text-xs sm:text-sm font-semibold shadow-inner">
+                            <i class="fa-solid fa-gavel text-sky-400 mr-1.5"></i>
+                            "The interpretation and application of these Terms shall be governed exclusively by the laws of the Republic of China (Taiwan). Any dispute or controversy arising out of or in connection with these Terms or the use of the Software shall be subject to the exclusive jurisdiction of the Taiwan Taichung District Court as the court of first instance."
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            The validity, interpretation, performance, and enforcement of this Agreement shall be governed by the laws of the Republic of China (Taiwan). Both parties agree to negotiate amicably in good faith should any controversy arise. In the event of litigation, both parties irrevocably agree that the <strong>Taiwan Taichung District Court</strong> shall serve as the exclusive court of first instance.
+                        </p>
+                    </section>
+
+                    <!-- 7. Amendments & Contact -->
+                    <section id="sec-contact" class="doc-section legal-card space-y-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-black text-sm">07</span>
+                            <h3 class="text-base font-bold text-white">Amendments & Contact Inquiries</h3>
+                        </div>
+                        <p class="text-xs sm:text-sm leading-relaxed">
+                            The Licensor reserves the right to amend these terms when necessary in accordance with evolving laws and product features. Revisions will be published on this portal with an updated version number and effective timestamp. Continued use of the Software implies acceptance of modified terms.
+                        </p>
+                        <div class="pt-2 flex items-center gap-3 text-xs text-slate-300">
+                            <i class="fa-solid fa-envelope text-indigo-400 text-sm"></i>
+                            <span>Legal or enterprise volume licensing inquiries:</span>
+                            <a href="mailto:support@aisming.com" class="text-indigo-400 hover:text-indigo-300 underline font-mono font-semibold">support@aisming.com</a>
+                        </div>
+                    </section>
+
+                </div>
+
             </div>
         </div>
     </main>
 
     <!-- 頁尾 -->
-    <footer class="bg-slate-950 text-slate-500 py-10 border-t border-white/10 text-xs text-center">
-        <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div>© 2026 ais7896-hue. Kyte Suite All rights reserved.</div>
+    <footer class="bg-slate-950 text-slate-500 py-10 border-t border-white/10 text-xs text-center relative z-10">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-feather-pointed text-indigo-400 text-sm"></i>
+                <span>© 2026 ais7896-hue. Kyte Suite All rights reserved.</span>
+            </div>
             <div class="flex items-center gap-6">
-                <a href="terms.html" class="hover:text-slate-300 transition font-bold text-slate-400">
+                <a href="terms.html" class="hover:text-slate-300 transition font-bold text-indigo-400">
                     <span class="lang-zh">服務條款</span>
                     <span class="lang-en hidden">Terms of Service</span>
                 </a>
@@ -262,7 +565,7 @@
                     <span class="lang-zh">隱私權政策</span>
                     <span class="lang-en hidden">Privacy Policy</span>
                 </a>
-                <a href="mailto:support@aisming.com" class="hover:text-slate-300 transition">support@aisming.com</a>
+                <a href="mailto:support@aisming.com" class="hover:text-slate-300 transition font-mono">support@aisming.com</a>
             </div>
         </div>
     </footer>
