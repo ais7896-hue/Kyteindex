@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 1. Google 搜尋引擎最佳化 (SEO) -->
+    <title>Kyte Suite - 為 Windows 打造的次世代桌面旗艦效率生態系 | KyteView · KyteShelf · KyteRename</title>
+    <meta name="description" content="Kyte Suite 專為 Windows 10/11 打造的旗艦生產力三部曲：KyteView 極速檔案預覽、KyteShelf 晃動懸浮暫存置物架、KyteRename 雙欄智慧安全批次更名。純本機運作、極速直覺、零雲端依賴。">
+    <meta name="keywords" content="Kyte Suite, Kyte, KyteView, KyteShelf, KyteRename, Windows效率工具, Windows生產力軟體, QuickLook替代, Dropover Windows, 批次改名工具, 檔案預覽">
+    <meta name="author" content="ais7896-hue">
+    <link rel="canonical" href="https://ais7896-hue.github.io/Kyteindex/">
+
+    <!-- 2. 瀏覽器與搜尋引擎設定 -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#1e1b4b">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <!-- 3. 社群分享卡片 (OpenGraph) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kyte Suite">
+    <meta property="og:title" content="Kyte Suite - 為 Windows 打造的次世代桌面旗艦效率生態系">
+    <meta property="og:description" content="預覽 · 暫存 · 更名！KyteView、KyteShelf 與 KyteRename 三位一體，重新定義 Windows 桌面操作體驗。">
+    <meta property="og:url" content="https://ais7896-hue.github.io/Kyteindex/">
+    <meta property="og:image" content="assets/kyteview.png">
+    <meta property="og:locale" content="zh_TW">
+
+    <!-- 4. Twitter / X 卡片 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kyte Suite - Windows 次世代桌面效率三部曲">
+    <meta name="twitter:description" content="KyteView 極速預覽、KyteShelf 懸浮置物架、KyteRename 批次更名。純本機安全運作，為高效而生。">
+    <meta name="twitter:image" content="assets/kyteview.png">
+
+    <!-- 5. 結構化資料 (Schema.org JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://ais7896-hue.github.io/Kyteindex/#website",
+          "url": "https://ais7896-hue.github.io/Kyteindex/",
+          "name": "Kyte Suite",
+          "description": "為 Windows 打造的次世代桌面旗艦效率生態系",
+          "inLanguage": "zh-TW"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://ais7896-hue.github.io/Kyteindex/#organization",
+          "name": "Kyte",
+          "url": "https://ais7896-hue.github.io/Kyteindex/",
+          "logo": "https://ais7896-hue.github.io/Kyteindex/assets/kyteview.png"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Tailwind CSS & FontAwesome -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kyteview: {
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            950: '#1e1b4b',
+                        },
+                        kyteshelf: {
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            950: '#082f49',
+                        },
+                        kyterename: {
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            amber: '#f59e0b',
+                            950: '#172554',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif;
+        }
+
+        .font-mono-code {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .gradient-hero {
+            background: radial-gradient(circle at 50% 15%, rgba(99, 102, 241, 0.20) 0%, rgba(2, 132, 199, 0.15) 35%, rgba(37, 99, 235, 0.08) 55%, rgba(15, 23, 42, 0) 80%);
+        }
+
+        .dark-glass {
+            background: rgba(15, 23, 42, 0.82);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .card-glow:hover {
+            box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.25), 0 0 0 1px rgba(99, 102, 241, 0.4);
+        }
+
+        @keyframes floatSubtle {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .animate-float {
+            animation: floatSubtle 5s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-indigo-600 selection:text-white">
+
+    <!-- 頂部公告列 -->
+    <div class="bg-gradient-to-r from-indigo-950 via-slate-900 to-sky-950 text-slate-300 text-xs py-2 px-4 text-center font-medium border-b border-white/10 flex items-center justify-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-bold text-[10px] border border-indigo-400/30">Kyte Suite 2026</span>
+        <span>Windows 次世代旗艦三部曲全線就緒：KyteView v1.4.0 · KyteShelf v1.0.0 · KyteRename v1.0.0</span>
+    </div>
+
+    <!-- 導航列 (Navbar) -->
+    <nav class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-white/10 transition-all">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-sky-500 to-blue-600 flex items-center justify-center shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition">
+                    <i class="fa-solid fa-feather-pointed text-white text-lg"></i>
+                </div>
+                <div class="flex flex-col text-left">
+                    <span class="text-xl font-extrabold tracking-tight text-white leading-tight flex items-center gap-1.5">
+                        Kyte Suite
+                        <span class="text-[10px] px-1.5 py-0.5 rounded bg-white/10 text-indigo-300 border border-white/10 font-bold">ECOSYSTEM</span>
+                    </span>
+                    <span class="text-[10px] font-semibold text-slate-400 tracking-wider">WINDOWS PRODUCTIVITY TRIO</span>
+                </div>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-300">
+                <a href="#suite" class="hover:text-white transition">生態三部曲</a>
+                <a href="#workflow" class="hover:text-white transition">黃金工作流</a>
+                <a href="#matrix" class="hover:text-white transition">規格對照</a>
+                <a href="#downloads" class="hover:text-white transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-download text-xs text-sky-400"></i>
+                    <span>下載中心</span>
+                </a>
+                <a href="#faq" class="hover:text-white transition">常見問答</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <a href="https://github.com/ais7896-hue" target="_blank"
+                    class="p-2 text-slate-400 hover:text-white transition text-lg" title="GitHub 組織首頁">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="#downloads"
+                    class="px-5 py-2 text-sm font-bold text-white bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 active:scale-95 rounded-xl shadow-lg shadow-indigo-600/30 transition flex items-center gap-2">
+                    <i class="fa-solid fa-rocket text-xs"></i>
+                    <span>全系列下載</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 主視覺橫幅 -->
+    <header class="relative gradient-hero pt-20 pb-24 px-6 text-center overflow-hidden">
+        <div class="max-w-5xl mx-auto">
+            
+            <!-- 認證膠囊 -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-indigo-400/30 text-indigo-300 text-xs font-bold mb-8 shadow-sm shadow-indigo-500/10">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <span>專為 Windows 10 / 11 深度雕琢的現代桌面效率生態系</span>
+            </div>
+
+            <!-- 主標題 -->
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.15] mb-6">
+                預覽 · 暫存 · 更名<br>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-sky-300 to-blue-400">
+                    Windows 桌面生產力三部曲
+                </span>
+            </h1>
+
+            <!-- 副標題 -->
+            <p class="text-base sm:text-xl text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed mb-12">
+                告別繁瑣的操作摩擦與雜亂工作流！Kyte Suite 整合三大核心桌面工具：<br class="hidden sm:inline">
+                按一下空白鍵瞬開預覽的 <strong class="text-indigo-400">KyteView</strong>、晃動滑鼠即刻吸附的 <strong class="text-sky-400">KyteShelf</strong>、以及 50ms 零延遲拓撲更名的 <strong class="text-blue-400">KyteRename</strong>。
+                純本機運作、極速直覺、零雲端隱私疑慮。
+            </p>
+
+            <!-- 按鈕組 -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                <a href="#suite"
+                    class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-indigo-600 via-blue-600 to-sky-600 hover:brightness-110 text-white font-bold rounded-2xl shadow-xl shadow-indigo-600/30 transition transform active:scale-95 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-shapes text-lg"></i>
+                    <span>探索三大核心產品</span>
+                </a>
+                <a href="#downloads"
+                    class="w-full sm:w-auto px-7 py-4 bg-slate-900/90 hover:bg-slate-800 text-slate-200 font-bold rounded-2xl border border-white/10 shadow-sm transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-circle-down text-sky-400"></i>
+                    <span>一站式下載中心</span>
+                </a>
+            </div>
+
+            <!-- 舞台展示卡：三部曲微縮聯動展示 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                <!-- Mini 1: KyteView -->
+                <div class="p-6 rounded-3xl dark-glass border border-indigo-500/30 shadow-xl hover:border-indigo-400 transition group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="assets/kyteview.png" class="w-10 h-10 rounded-xl shadow" alt="KyteView">
+                        <div>
+                            <h3 class="font-extrabold text-white text-lg group-hover:text-indigo-400 transition">KyteView</h3>
+                            <span class="text-[10px] text-indigo-300 font-mono-code font-bold">檔案即時預覽神器</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        按一下 Space 空白鍵，內容瞬間彈出！支援 Office 簡報、4K 影音硬解、壓縮檔單檔拖曳抽出與程式碼語法高亮。
+                    </p>
+                    <div class="flex items-center justify-between text-xs font-bold pt-2 border-t border-white/5">
+                        <span class="text-indigo-400">50ms 瞬開 · 智慧避讓</span>
+                        <a href="https://ais7896-hue.github.io/KyteView-website/" class="text-slate-400 hover:text-white flex items-center gap-1">
+                            <span>官網</span><i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mini 2: KyteShelf -->
+                <div class="p-6 rounded-3xl dark-glass border border-sky-500/30 shadow-xl hover:border-sky-400 transition group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="assets/kyteshelf.png" class="w-10 h-10 rounded-xl shadow" alt="KyteShelf">
+                        <div>
+                            <h3 class="font-extrabold text-white text-lg group-hover:text-sky-400 transition">KyteShelf</h3>
+                            <span class="text-[10px] text-sky-300 font-mono-code font-bold">桌面懸浮暫存置物架</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        按住檔案晃動滑鼠，置物架立即召喚！支援剪貼簿智慧貼入、大圖懸停預覽、一鍵打包 ZIP 與 Outlook 郵件直接附加。
+                    </p>
+                    <div class="flex items-center justify-between text-xs font-bold pt-2 border-t border-white/5">
+                        <span class="text-sky-400">晃動召喚 · 跨視窗中轉</span>
+                        <a href="https://ais7896-hue.github.io/KyteShelf-website/" class="text-slate-400 hover:text-white flex items-center gap-1">
+                            <span>官網</span><i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mini 3: KyteRename -->
+                <div class="p-6 rounded-3xl dark-glass border border-blue-500/30 shadow-xl hover:border-blue-400 transition group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="assets/kyterename.png" class="w-10 h-10 rounded-xl shadow" alt="KyteRename">
+                        <div>
+                            <h3 class="font-extrabold text-white text-lg group-hover:text-blue-400 transition">KyteRename</h3>
+                            <span class="text-[10px] text-blue-300 font-mono-code font-bold">智慧批次重新命名</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        雙欄 50ms 零延遲對照！琥珀金正則高亮、相片 EXIF/音樂 ID3 抽取、三階段安全 DAG 拓撲換名與 Ctrl+Z 快照安全還原。
+                    </p>
+                    <div class="flex items-center justify-between text-xs font-bold pt-2 border-t border-white/5">
+                        <span class="text-blue-400">雙欄即時預覽 · 拓撲安全</span>
+                        <a href="https://ais7896-hue.github.io/KyteRename/" class="text-slate-400 hover:text-white flex items-center gap-1">
+                            <span>官網</span><i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- 生態三部曲深度特寫 (The Suite Showcase) -->
+    <section id="suite" class="py-24 bg-slate-900/60 border-y border-white/10">
+        <div class="max-w-7xl mx-auto px-6 space-y-24">
+            
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 bg-indigo-500/10 px-3.5 py-1.5 rounded-full border border-indigo-400/20">
+                    Product Showcase
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white mt-4 tracking-tight">
+                    三大旗艦產品 深度解析
+                </h2>
+                <p class="text-slate-400 text-base mt-4">
+                    每一款軟體均為獨立專業利器，組合在一起更發揮一加一大於二的協同效應。
+                </p>
+            </div>
+
+            <!-- 產品 1: KyteView -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-bold">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>PART 01 · 快速檢視與內容確認</span>
+                    </div>
+                    <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                        KyteView<br>
+                        <span class="text-indigo-400 text-2xl sm:text-3xl font-bold">次世代 Windows 極速檔案預覽神器</span>
+                    </h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        不再為了確認一份 PPTX 簡報或 4K 影音反覆開啟臃腫的 Office 或外掛播放器。選中檔案按一下 <kbd class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 font-mono-code text-indigo-300 font-bold text-xs">Space</kbd> 空白鍵，內容瞬間秒開。具備 Windows 11 原生 Mica 毛玻璃材質、智慧避讓偏移與側邊釘選模式。
+                    </p>
+                    <div class="grid grid-cols-2 gap-3 text-xs text-slate-300 font-sans">
+                        <div class="p-3 bg-slate-950/80 rounded-xl border border-white/10 flex items-center gap-2.5">
+                            <i class="fa-solid fa-file-powerpoint text-indigo-400"></i>
+                            <span>Office 免裝本體秒開</span>
+                        </div>
+                        <div class="p-3 bg-slate-950/80 rounded-xl border border-white/10 flex items-center gap-2.5">
+                            <i class="fa-solid fa-file-zipper text-indigo-400"></i>
+                            <span>壓縮檔單檔直接拖曳抽出</span>
+                        </div>
+                        <div class="p-3 bg-slate-950/80 rounded-xl border border-white/10 flex items-center gap-2.5">
+                            <i class="fa-solid fa-film text-indigo-400"></i>
+                            <span>GPU 4K 硬解影音播放</span>
+                        </div>
+                        <div class="p-3 bg-slate-950/80 rounded-xl border border-white/10 flex items-center gap-2.5">
+                            <i class="fa-solid fa-window-restore text-indigo-400"></i>
+                            <span>智慧避讓與 8 向邊緣縮放</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-3 pt-2">
+                        <a href="https://ais7896-hue.github.io/KyteView-website/"
+                            class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl text-xs shadow-lg shadow-indigo-600/30 transition flex items-center gap-2">
+                            <i class="fa-solid fa-globe"></i>
+                            <span>進入 KyteView 官方首頁</span>
+                        </a>
+                        <a href="https://ais7896-hue.github.io/KyteView-website/guide.html"
+                            class="px-5 py-3 bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold rounded-xl text-xs border border-white/10 transition flex items-center gap-2">
+                            <i class="fa-solid fa-book-open text-indigo-400"></i>
+                            <span>操作指南</span>
+                        </a>
+                        <a href="https://github.com/ais7896-hue/KyteView/releases/download/v1.4.0/KyteView_Setup_1.4.0.exe"
+                            class="px-5 py-3 bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold rounded-xl text-xs border border-white/10 transition flex items-center gap-2">
+                            <i class="fa-solid fa-download"></i>
+                            <span>下載安裝版 (v1.4.0)</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-6">
+                    <div class="p-6 rounded-3xl dark-glass border border-indigo-500/20 shadow-2xl relative">
+                        <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                                <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                                <span class="text-xs font-semibold text-slate-400 ml-2">KyteView — 簡報預覽</span>
+                            </div>
+                            <span class="text-[10px] font-mono-code text-indigo-300 bg-indigo-950/80 px-2 py-0.5 rounded border border-indigo-800/80">Space Triggered</span>
+                        </div>
+                        <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800/80 text-center space-y-4">
+                            <div class="inline-block p-4 rounded-2xl bg-indigo-950/60 border border-indigo-800/60">
+                                <i class="fa-solid fa-file-powerpoint text-5xl text-indigo-400"></i>
+                            </div>
+                            <h4 class="font-bold text-white text-base">2026_Q4_商業計畫書_核定本.pptx</h4>
+                            <p class="text-xs text-slate-400 max-w-sm mx-auto">
+                                48 頁大綱已讀取 · 內嵌向量投影片縮圖渲染 · 解析度 1920x1080 · 耗時 18ms
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 產品 2: KyteShelf -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-6 lg:order-2 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs font-bold">
+                        <i class="fa-solid fa-box-archive"></i>
+                        <span>PART 02 · 收集暫存與多向中轉</span>
+                    </div>
+                    <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                        KyteShelf<br>
+                        <span class="text-sky-400 text-2xl sm:text-3xl font-bold">桌面懸浮拖曳暫存置物架</span>
+                    </h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        在 Windows 上跨資料夾、跨應用程式移動檔案時不再手忙腳亂。當你抓住檔案並輕微左右晃動滑鼠，置物架便會自動浮現在游標手邊，讓你隨手暫存檔案，支援多次收集後一口氣拖入目的地。
+                    </p>
+                    <div class="grid grid-cols-2 gap-3 text-xs text-slate-300 font-sans">
+                        <div class="p-3 bg-slate-950/80 rounded-xl border border-white/10 flex items-center gap-2.5">
+                            <i class="fa-solid fa-hand-fist text-sky-400"></i>
+                            <span>晃動即召喚 (Shake to Summon)</span>
+                        </div>
+                        <div class="p-3 bg-slate-950/80 rounded-xl border border-white/10 flex items-center gap-2.5">
+                            <i class="fa-solid fa-paste text-sky-400"></i>
+                            <span>剪貼簿文字/圖片快速貼入</span>
+                        </div>
+                        <div class="p-3 bg-slate-950/80 rounded-xl border border-white/10 flex items-center gap-2.5">
+                            <i class="fa-solid fa-envelope-circle-check text-sky-400"></i>
+                            <span>Outlook 郵件附件一鍵掛載</span>
+                        </div>
+                        <div class="p-3 bg-slate-950/80 rounded-xl border border-white/10 flex items-center gap-2.5">
+                            <i class="fa-solid fa-file-zipper text-sky-400"></i>
+                            <span>一鍵打包壓縮為 ZIP</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-3 pt-2">
+                        <a href="https://ais7896-hue.github.io/KyteShelf-website/"
+                            class="px-6 py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold rounded-xl text-xs shadow-lg shadow-sky-600/30 transition flex items-center gap-2">
+                            <i class="fa-solid fa-globe"></i>
+                            <span>進入 KyteShelf 官方首頁</span>
+                        </a>
+                        <a href="https://ais7896-hue.github.io/KyteShelf-website/guide.html"
+                            class="px-5 py-3 bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold rounded-xl text-xs border border-white/10 transition flex items-center gap-2">
+                            <i class="fa-solid fa-book-open text-sky-400"></i>
+                            <span>操作指南</span>
+                        </a>
+                        <a href="https://github.com/ais7896-hue/KyteShelf/releases"
+                            class="px-5 py-3 bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold rounded-xl text-xs border border-white/10 transition flex items-center gap-2">
+                            <i class="fa-solid fa-download"></i>
+                            <span>下載安裝版</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-6 lg:order-1">
+                    <div class="p-6 rounded-3xl dark-glass border border-sky-500/20 shadow-2xl relative">
+                        <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                                <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                                <span class="text-xs font-semibold text-slate-400 ml-2">KyteShelf — 懸浮中轉架</span>
+                            </div>
+                            <span class="text-[10px] font-mono-code text-sky-300 bg-sky-950/80 px-2 py-0.5 rounded border border-sky-800/80">Shake to Summon</span>
+                        </div>
+                        <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800/80 space-y-3">
+                            <div class="p-3 bg-slate-900 rounded-xl border border-dashed border-sky-500/40 flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-images text-sky-400 text-xl"></i>
+                                    <div>
+                                        <div class="text-xs font-bold text-white">4 個檔案已暫存入架</div>
+                                        <div class="text-[10px] text-slate-400">墾丁相片 (3) + 合約文件 (1)</div>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-bold text-sky-400 bg-sky-950 px-2 py-1 rounded">隨時拖出</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 產品 3: KyteRename -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-bold">
+                        <i class="fa-solid fa-file-pen"></i>
+                        <span>PART 03 · 智慧重構與拓撲改名</span>
+                    </div>
+                    <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                        KyteRename<br>
+                        <span class="text-blue-400 text-2xl sm:text-3xl font-bold">次世代智慧批次重新命名神器</span>
+                    </h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        結合萬級檔案虛擬滾動、琥珀金正則高亮匹配、相片 EXIF/音樂 ID3 深度抽取與三階段 DAG 拓撲改名技術。解決循環改名相撞問題，每次更名自動記錄原子快照日誌，隨時按 <kbd class="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 font-mono-code text-blue-300 font-bold text-xs">Ctrl+Z</kbd> 毫秒級安全原路還原。
+                    </p>
+                    <div class="grid grid-cols-2 gap-3 text-xs text-slate-300 font-sans">
+                        <div class="p-3 bg-slate-950/80 rounded-xl border border-white/10 flex items-center gap-2.5">
+                            <i class="fa-solid fa-highlighter text-amber-400"></i>
+                            <span>琥珀金動態高亮匹配</span>
+                        </div>
+                        <div class="p-3 bg-slate-950/80 rounded-xl border border-white/10 flex items-center gap-2.5">
+                            <i class="fa-solid fa-diagram-project text-blue-400"></i>
+                            <span>三階段 DAG 拓撲換名</span>
+                        </div>
+                        <div class="p-3 bg-slate-950/80 rounded-xl border border-white/10 flex items-center gap-2.5">
+                            <i class="fa-solid fa-camera text-blue-400"></i>
+                            <span>相片 EXIF & 音樂 ID3 抽取</span>
+                        </div>
+                        <div class="p-3 bg-slate-950/80 rounded-xl border border-white/10 flex items-center gap-2.5">
+                            <i class="fa-solid fa-rotate-left text-emerald-400"></i>
+                            <span>Ctrl+Z 快照安全原子還原</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-3 pt-2">
+                        <a href="https://ais7896-hue.github.io/KyteRename/"
+                            class="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-xs shadow-lg shadow-blue-600/30 transition flex items-center gap-2">
+                            <i class="fa-solid fa-globe"></i>
+                            <span>進入 KyteRename 官方首頁</span>
+                        </a>
+                        <a href="https://ais7896-hue.github.io/KyteRename/guide.html"
+                            class="px-5 py-3 bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold rounded-xl text-xs border border-white/10 transition flex items-center gap-2">
+                            <i class="fa-solid fa-book-open text-blue-400"></i>
+                            <span>操作指南</span>
+                        </a>
+                        <a href="https://github.com/ais7896-hue/KyteRename/releases/download/v1.0.0/KyteRename_Setup_1.0.0.exe"
+                            class="px-5 py-3 bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold rounded-xl text-xs border border-white/10 transition flex items-center gap-2">
+                            <i class="fa-solid fa-download"></i>
+                            <span>下載安裝版 (v1.0.0)</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-6">
+                    <div class="p-6 rounded-3xl dark-glass border border-blue-500/20 shadow-2xl relative">
+                        <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                                <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                                <span class="text-xs font-semibold text-slate-400 ml-2">KyteRename — 雙欄即時對照</span>
+                            </div>
+                            <span class="text-[10px] font-mono-code text-blue-300 bg-blue-950/80 px-2 py-0.5 rounded border border-blue-800/80">DAG Safe</span>
+                        </div>
+                        <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800/80 space-y-2 text-xs font-mono-code">
+                            <div class="flex justify-between items-center text-slate-400 pb-1 border-b border-slate-800 text-[10px]">
+                                <span>原始檔名 (Original)</span>
+                                <span>更名後 (Renamed)</span>
+                            </div>
+                            <div class="flex justify-between items-center text-slate-300 py-1">
+                                <span>DSC_<span class="bg-amber-500/30 text-amber-300 px-1 rounded">20261005</span>_01.jpg</span>
+                                <span class="text-sky-300 font-bold">2026-10-05_墾丁_001.jpg</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 黃金工作流 (The Ultimate Productivity Workflow) -->
+    <section id="workflow" class="py-24 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-sky-400 bg-sky-500/10 px-3.5 py-1.5 rounded-full border border-sky-400/20">
+                    Seamless Synergy
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white mt-4 tracking-tight">
+                    三位一體：無縫串聯的桌面工作流
+                </h2>
+                <p class="text-slate-400 text-base mt-4 leading-relaxed">
+                    見證 KyteSuite 如何將散落的日常動作轉化為流暢無阻的優雅節奏。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <!-- 流程 1 -->
+                <div class="p-8 rounded-3xl dark-glass border border-white/10 card-glow transition relative">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-500/15 text-sky-400 flex items-center justify-center text-xl mb-6 border border-sky-500/30 font-black">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">KyteShelf：晃動收集暫存</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        在網頁下載圖片、從通訊軟體接收文件，或是跨資料夾翻找素材時，抓住檔案左右晃動游標，KyteShelf 置物架自動彈出接收，一次打包多來源資產。
+                    </p>
+                </div>
+
+                <!-- 流程 2 -->
+                <div class="p-8 rounded-3xl dark-glass border border-white/10 card-glow transition relative">
+                    <div class="w-12 h-12 rounded-2xl bg-indigo-500/15 text-indigo-400 flex items-center justify-center text-xl mb-6 border border-indigo-500/30 font-black">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">KyteView：空白鍵毫秒檢驗</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        在檔案清單或暫存架中，按一下 <kbd class="px-1.5 py-0.5 rounded bg-slate-800 text-indigo-300 font-mono-code text-xs">Space</kbd> 空白鍵，直接預覽相片解析度、簡報投影片與影音內容，無需開啟肥大主程式即可迅速確認。
+                    </p>
+                </div>
+
+                <!-- 流程 3 -->
+                <div class="p-8 rounded-3xl dark-glass border border-white/10 card-glow transition relative">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-500/15 text-blue-400 flex items-center justify-center text-xl mb-6 border border-blue-500/30 font-black">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">KyteRename：拓撲改名安全歸檔</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        將收集好的檔案拖入 KyteRename，自動套用 EXIF 拍攝時間、音樂 ID3 標籤與智慧流水號，雙欄即時對照無誤後，透過 DAG 拓撲引擎一秒安全提交更名歸檔。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 規格與特點對照表 (Matrix) -->
+    <section id="matrix" class="py-24 bg-slate-900/60 border-y border-white/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 bg-indigo-500/10 px-3.5 py-1.5 rounded-full border border-indigo-400/20">
+                    Technical Specifications
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white mt-4 tracking-tight">
+                    Kyte Suite 全系列規格對照
+                </h2>
+                <p class="text-slate-400 text-base mt-4">
+                    秉持極致輕量、純本機運作、無廣告、無隱私上傳的設計哲學。
+                </p>
+            </div>
+
+            <div class="dark-glass rounded-3xl border border-white/15 overflow-hidden shadow-2xl">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                        <thead>
+                            <tr class="bg-slate-900/90 border-b border-white/10 text-slate-300">
+                                <th class="p-4 sm:p-5 font-bold">產品與指標</th>
+                                <th class="p-4 sm:p-5 font-bold text-indigo-400">KyteView (預覽)</th>
+                                <th class="p-4 sm:p-5 font-bold text-sky-400">KyteShelf (暫存)</th>
+                                <th class="p-4 sm:p-5 font-bold text-blue-400">KyteRename (更名)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/5 text-slate-300 font-sans">
+                            <tr class="hover:bg-white/5 transition">
+                                <td class="p-4 sm:p-5 font-bold text-white">主要功能定位</td>
+                                <td class="p-4 sm:p-5">Space 快速預覽 Office/影音/壓縮包</td>
+                                <td class="p-4 sm:p-5">晃動召喚桌面懸浮暫存中轉架</td>
+                                <td class="p-4 sm:p-5">雙欄 50ms 零延遲安全拓撲批次改名</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition">
+                                <td class="p-4 sm:p-5 font-bold text-white">啟動快捷操作</td>
+                                <td class="p-4 sm:p-5 font-mono-code text-indigo-300">Space / ESC</td>
+                                <td class="p-4 sm:p-5 font-mono-code text-sky-300">滑鼠晃動 / Ctrl + ~</td>
+                                <td class="p-4 sm:p-5 font-mono-code text-blue-300">桌面圖示 / 右鍵選單</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition">
+                                <td class="p-4 sm:p-5 font-bold text-white">系統相容性</td>
+                                <td class="p-4 sm:p-5">Windows 10 / 11 (64-bit)</td>
+                                <td class="p-4 sm:p-5">Windows 10 / 11 (64-bit)</td>
+                                <td class="p-4 sm:p-5">Windows 10 / 11 (64-bit)</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition">
+                                <td class="p-4 sm:p-5 font-bold text-white">資料隱私安全性</td>
+                                <td class="p-4 sm:p-5 text-emerald-400 font-bold">100% 本地端離線解析</td>
+                                <td class="p-4 sm:p-5 text-emerald-400 font-bold">純本機暫存，無雲端依賴</td>
+                                <td class="p-4 sm:p-5 text-emerald-400 font-bold">本地原子快照，支援 Ctrl+Z 還原</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition">
+                                <td class="p-4 sm:p-5 font-bold text-white">跨軟體生態協同</td>
+                                <td class="p-4 sm:p-5">支援 KyteRename 管道通訊</td>
+                                <td class="p-4 sm:p-5">支援全視窗拖放與 Outlook 附加</td>
+                                <td class="p-4 sm:p-5">內建 Space 鍵連動 KyteView 預覽</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下載中心 (Download Center) -->
+    <section id="downloads" class="py-24 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-3.5 py-1.5 rounded-full border border-emerald-400/20">
+                    Download Hub
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white mt-4 tracking-tight">
+                    一站式全系列下載中心
+                </h2>
+                <p class="text-slate-400 text-base mt-4">
+                    全部工具均經過 Windows 10/11 嚴格編譯測試，支援乾淨卸載、純綠色便攜或標準安裝精靈。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 下載 1: KyteView -->
+                <div class="p-8 rounded-3xl dark-glass border border-indigo-500/30 flex flex-col justify-between hover:border-indigo-400 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <img src="assets/kyteview.png" class="w-12 h-12 rounded-xl shadow" alt="KyteView">
+                            <span class="text-xs font-mono-code font-bold text-indigo-300 bg-indigo-950/80 px-2.5 py-1 rounded border border-indigo-800/80">v1.4.0 正式版</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-2">KyteView</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed mb-6">
+                            Windows 空白鍵快速預覽神器。免 Office 預覽投影片、4K 影音硬解、壓縮檔單檔抽出。
+                        </p>
+                    </div>
+                    <div class="space-y-3 pt-4 border-t border-white/10">
+                        <a href="https://github.com/ais7896-hue/KyteView/releases/download/v1.4.0/KyteView_Setup_1.4.0.exe"
+                            class="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl text-xs shadow-md transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-download"></i>
+                            <span>下載 Windows 安裝版 (45MB)</span>
+                        </a>
+                        <div class="flex items-center justify-between text-xs text-slate-400 px-1">
+                            <a href="https://ais7896-hue.github.io/KyteView-website/" class="hover:text-indigo-400 transition">產品官網</a>
+                            <a href="https://ais7896-hue.github.io/KyteView-website/guide.html" class="hover:text-indigo-400 transition">操作指南</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 下載 2: KyteShelf -->
+                <div class="p-8 rounded-3xl dark-glass border border-sky-500/30 flex flex-col justify-between hover:border-sky-400 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <img src="assets/kyteshelf.png" class="w-12 h-12 rounded-xl shadow" alt="KyteShelf">
+                            <span class="text-xs font-mono-code font-bold text-sky-300 bg-sky-950/80 px-2.5 py-1 rounded border border-sky-800/80">v1.0.0 正式版</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-2">KyteShelf</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed mb-6">
+                            桌面懸浮拖曳暫存置物架。晃動滑鼠立即吸附暫存、剪貼簿貼上、ZIP 打包、Outlook 串接。
+                        </p>
+                    </div>
+                    <div class="space-y-3 pt-4 border-t border-white/10">
+                        <a href="https://github.com/ais7896-hue/KyteShelf/releases"
+                            class="w-full py-3 bg-sky-600 hover:bg-sky-500 text-white font-bold rounded-xl text-xs shadow-md transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-download"></i>
+                            <span>下載 Windows 安裝版 (36MB)</span>
+                        </a>
+                        <div class="flex items-center justify-between text-xs text-slate-400 px-1">
+                            <a href="https://ais7896-hue.github.io/KyteShelf-website/" class="hover:text-sky-400 transition">產品官網</a>
+                            <a href="https://ais7896-hue.github.io/KyteShelf-website/guide.html" class="hover:text-sky-400 transition">操作指南</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 下載 3: KyteRename -->
+                <div class="p-8 rounded-3xl dark-glass border border-blue-500/30 flex flex-col justify-between hover:border-blue-400 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <img src="assets/kyterename.png" class="w-12 h-12 rounded-xl shadow" alt="KyteRename">
+                            <span class="text-xs font-mono-code font-bold text-blue-300 bg-blue-950/80 px-2.5 py-1 rounded border border-blue-800/80">v1.0.0 正式版</span>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-2">KyteRename</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed mb-6">
+                            次世代智慧批次重新命名神器。雙欄 50ms 零延遲預覽、琥珀金正則高亮、EXIF/ID3、安全 DAG 拓撲換名。
+                        </p>
+                    </div>
+                    <div class="space-y-3 pt-4 border-t border-white/10">
+                        <a href="https://github.com/ais7896-hue/KyteRename/releases/download/v1.0.0/KyteRename_Setup_1.0.0.exe"
+                            class="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-xs shadow-md transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-download"></i>
+                            <span>下載 Windows 安裝版 (38MB)</span>
+                        </a>
+                        <div class="flex items-center justify-between text-xs text-slate-400 px-1">
+                            <a href="https://ais7896-hue.github.io/KyteRename/" class="hover:text-blue-400 transition">產品官網</a>
+                            <a href="https://ais7896-hue.github.io/KyteRename/guide.html" class="hover:text-blue-400 transition">操作指南</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ 常見問答 -->
+    <section id="faq" class="py-24 bg-slate-900/60 border-t border-white/10">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-indigo-400 bg-indigo-500/10 px-3.5 py-1.5 rounded-full border border-indigo-400/20">
+                    Questions & Answers
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white mt-4 tracking-tight">
+                    常見問與答
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                <details class="group p-6 rounded-2xl dark-glass border border-white/10 open:border-indigo-400/50 transition">
+                    <summary class="flex justify-between items-center font-bold text-white cursor-pointer list-none text-base">
+                        <span>三款軟體是強制綁定還是可以各自獨立單獨使用？</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition duration-300"></i>
+                    </summary>
+                    <p class="text-slate-400 text-sm leading-relaxed mt-4 pt-4 border-t border-white/5">
+                        完全可以各自獨立單獨使用！KyteView、KyteShelf 與 KyteRename 均為獨立免依賴的 Windows 應用程式。當您同時安裝兩款以上時，程式會自動透過 Windows Named Pipe IPC 啟動雙向無縫協同功能（例如在 KyteRename 清單按 Space 喚起 KyteView 預覽）。
+                    </p>
+                </details>
+
+                <details class="group p-6 rounded-2xl dark-glass border border-white/10 open:border-indigo-400/50 transition">
+                    <summary class="flex justify-between items-center font-bold text-white cursor-pointer list-none text-base">
+                        <span>這些軟體是否會收集或上傳我的本機個人檔案？</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition duration-300"></i>
+                    </summary>
+                    <p class="text-slate-400 text-sm leading-relaxed mt-4 pt-4 border-t border-white/5">
+                        絕對不會！Kyte Suite 全系列產品均為 100% 本機純離線運作工具。所有的預覽渲染、中繼資料抽取、暫存與重新命名作業均在您本機電腦的記憶體與 CPU/GPU 內完成，絕不連網傳輸您的任何檔案內容，隱私絕對安全。
+                    </p>
+                </details>
+
+                <details class="group p-6 rounded-2xl dark-glass border border-white/10 open:border-indigo-400/50 transition">
+                    <summary class="flex justify-between items-center font-bold text-white cursor-pointer list-none text-base">
+                        <span>如果公司電腦沒有管理員權限，可以使用綠色免安裝版嗎？</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition duration-300"></i>
+                    </summary>
+                    <p class="text-slate-400 text-sm leading-relaxed mt-4 pt-4 border-t border-white/5">
+                        可以！各產品在 GitHub Releases 頁面除了提供標準 Inno Setup 安裝檔之外，亦提供便攜免安裝綠色壓縮包，解壓縮後直接雙擊執行即可使用，無需管理員提權。
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-16 border-t border-white/10 text-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-sky-500 to-blue-600 flex items-center justify-center shadow">
+                        <i class="fa-solid fa-feather-pointed text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <div class="font-extrabold text-white text-lg tracking-tight">Kyte Suite</div>
+                        <div class="text-xs text-slate-500">The Modern Windows Productivity Ecosystem</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-8 text-xs font-semibold text-slate-400">
+                    <a href="https://ais7896-hue.github.io/KyteView-website/" class="hover:text-indigo-400 transition">KyteView 官網</a>
+                    <a href="https://ais7896-hue.github.io/KyteShelf-website/" class="hover:text-sky-400 transition">KyteShelf 官網</a>
+                    <a href="https://ais7896-hue.github.io/KyteRename/" class="hover:text-blue-400 transition">KyteRename 官網</a>
+                    <a href="https://github.com/ais7896-hue" target="_blank" class="hover:text-white transition">GitHub 組織</a>
+                    <a href="mailto:support@aisming.com" class="hover:text-white transition">支援信箱</a>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-900 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-600">
+                <div>© 2026 ais7896-hue. All rights reserved. Designed with precision for Windows 10 & 11.</div>
+                <div>純本機離線安全 · 零隱私收集 · 極致效能</div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
