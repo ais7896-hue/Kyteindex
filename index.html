@@ -88,6 +88,8 @@
     <!-- Tailwind CSS & FontAwesome -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Lemon Squeezy 浮窗結帳腳本 -->
+    <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
     <script src="assets/i18n.js" defer></script>
 
     <script>
@@ -204,6 +206,7 @@
                     <i class="fa-solid fa-download text-xs text-sky-400"></i>
                     <span data-i18n="nav.downloads">下載中心</span>
                 </a>
+                <a href="#pricing" data-i18n="nav.pricing" class="hover:text-white transition">授權方案</a>
                 <a href="#faq" data-i18n="nav.faq" class="hover:text-white transition">常見問答</a>
             </div>
 
@@ -214,10 +217,10 @@
                     <i class="fa-solid fa-globe text-sky-400"></i>
                     <span id="lang-btn-text">EN</span>
                 </button>
-                <a href="#downloads"
-                    class="px-5 py-2 text-sm font-bold text-white bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 active:scale-95 rounded-xl shadow-lg shadow-indigo-600/30 transition flex items-center gap-2">
-                    <i class="fa-solid fa-rocket text-xs"></i>
-                    <span data-i18n="nav.all_downloads">全系列下載</span>
+                <a href="https://kytesuite.lemonsqueezy.com/checkout/buy/e2f15337-72b7-438e-8cc4-0dcbdb236816?embed=1&checkout[custom][product_type]=bundle"
+                    class="lemonsqueezy-button px-5 py-2 text-sm font-bold text-white bg-gradient-to-r from-indigo-600 via-sky-600 to-blue-600 hover:brightness-110 active:scale-95 rounded-xl shadow-lg shadow-indigo-600/30 transition flex items-center gap-2">
+                    <i class="fa-solid fa-gem text-xs text-amber-300"></i>
+                    <span data-i18n="nav.buy_bundle">購買套裝</span>
                 </a>
             </div>
         </div>
@@ -264,6 +267,11 @@
                     class="w-full sm:w-auto px-7 py-4 bg-slate-900/90 hover:bg-slate-800 text-slate-200 font-bold rounded-2xl border border-white/10 shadow-sm transition flex items-center justify-center gap-2">
                     <i class="fa-solid fa-circle-down text-sky-400"></i>
                     <span data-i18n="hero.btn_hub">一站式下載中心</span>
+                </a>
+                <a href="#pricing"
+                    class="w-full sm:w-auto px-7 py-4 bg-slate-900/90 hover:bg-slate-800 text-amber-300 font-bold rounded-2xl border border-amber-400/20 shadow-sm transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-gem text-amber-400"></i>
+                    <span data-i18n="hero.btn_pricing">授權方案與定價</span>
                 </a>
             </div>
 
@@ -807,6 +815,11 @@
                             <i class="fa-solid fa-file-zipper"></i>
                             <span data-i18n="downloads.portable">下載免安裝綠色版 (Portable .zip)</span>
                         </a>
+                        <a href="https://kytesuite.lemonsqueezy.com/checkout/buy/dc31284c-308a-4cd1-8dfd-99023249f1a9?embed=1&checkout[custom][product_type]=kyteview"
+                            class="lemonsqueezy-button w-full py-2 bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 font-bold rounded-xl text-xs border border-indigo-400/20 transition flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-bolt text-amber-400"></i>
+                            <span data-i18n="downloads.buy_pro">購買正版序號</span>
+                        </a>
                         <div class="flex items-center justify-between text-xs text-slate-400 px-1 pt-1">
                             <a href="https://kyteview.aisming.com/" class="hover:text-indigo-400 transition"
                                 data-i18n="downloads.site">產品官網</a>
@@ -841,6 +854,11 @@
                             class="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-sky-300 font-bold rounded-xl text-xs border border-sky-400/30 transition flex items-center justify-center gap-2">
                             <i class="fa-solid fa-file-zipper"></i>
                             <span data-i18n="downloads.portable">下載免安裝綠色版 (Portable .zip)</span>
+                        </a>
+                        <a href="https://kytesuite.lemonsqueezy.com/checkout/buy/461f3030-b622-4ef5-a1f6-f2e73a9968b1?embed=1&checkout[custom][product_type]=kyteshelf"
+                            class="lemonsqueezy-button w-full py-2 bg-sky-500/10 hover:bg-sky-500/20 text-sky-300 font-bold rounded-xl text-xs border border-sky-400/20 transition flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-bolt text-amber-400"></i>
+                            <span data-i18n="downloads.buy_pro">購買正版序號</span>
                         </a>
                         <div class="flex items-center justify-between text-xs text-slate-400 px-1 pt-1">
                             <a href="https://kyteshelf.aisming.com/"
@@ -877,12 +895,158 @@
                             <i class="fa-solid fa-file-zipper"></i>
                             <span data-i18n="downloads.portable">下載免安裝綠色版 (Portable .zip)</span>
                         </a>
+                        <a href="https://kytesuite.lemonsqueezy.com/checkout/buy/a2c3379f-1b30-4d24-aedc-437e51670559?embed=1&checkout[custom][product_type]=kyterename"
+                            class="lemonsqueezy-button w-full py-2 bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 font-bold rounded-xl text-xs border border-blue-400/20 transition flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-bolt text-amber-400"></i>
+                            <span data-i18n="downloads.buy_pro">購買正版序號</span>
+                        </a>
                         <div class="flex items-center justify-between text-xs text-slate-400 px-1 pt-1">
                             <a href="https://kyterename.aisming.com/" class="hover:text-blue-400 transition"
                                 data-i18n="downloads.site">產品官網</a>
                             <a href="https://kyterename.aisming.com/guide.html"
                                 class="hover:text-blue-400 transition" data-i18n="downloads.guide">操作指南</a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 授權方案與定價 (Pricing & Plans) -->
+    <section id="pricing" class="py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 border-t border-white/10 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-indigo-600/15 via-sky-500/10 to-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-3.5 py-1.5 rounded-full border border-amber-400/20"
+                    data-i18n="pricing.badge">
+                    PRICING & LICENSING
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white mt-4 tracking-tight" data-i18n="pricing.title">
+                    一次買斷，解鎖 Windows 桌面極致生產力
+                </h2>
+                <p class="text-slate-400 text-base mt-4" data-i18n="pricing.desc">
+                    純本機離線安全、拒絕繁瑣年費訂閱，每組序號同時授權啟用 2 台裝置。
+                </p>
+            </div>
+
+            <!-- 主推旗艦方案：Kyte Suite 旗艦三部曲全套裝 -->
+            <div class="max-w-3xl mx-auto mb-16 p-8 sm:p-10 rounded-3xl bg-gradient-to-b from-slate-900/90 to-slate-950 border-2 border-indigo-500/60 shadow-2xl shadow-indigo-500/20 relative overflow-hidden">
+                <div class="absolute -top-12 -right-12 w-48 h-48 bg-gradient-to-br from-indigo-500/20 to-sky-500/20 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+                    <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-gradient-to-r from-amber-500 to-indigo-500 text-white shadow-md flex items-center gap-1.5">
+                        <i class="fa-solid fa-fire text-amber-200"></i>
+                        <span data-i18n="pricing.bundle_badge">熱銷首選 · 三合一套裝特惠</span>
+                    </span>
+                    <span class="text-xs font-mono-code font-bold text-indigo-300 bg-indigo-950/80 px-2.5 py-1 rounded border border-indigo-800/80" data-i18n="pricing.bundle_tag">
+                        All-in-One Bundle
+                    </span>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-4 mb-4">
+                    <div>
+                        <h3 class="text-2xl sm:text-3xl font-black text-white" data-i18n="pricing.bundle_title">
+                            Kyte Suite 旗艦三部曲全套裝
+                        </h3>
+                        <p class="text-sm text-slate-300 mt-2" data-i18n="pricing.bundle_desc">
+                            一次打包擁有 KyteView 極速預覽、KyteShelf 懸浮置物架、KyteRename 智慧批次更名三大生產力神器！
+                        </p>
+                    </div>
+                    <div class="flex items-baseline gap-2 shrink-0">
+                        <span class="text-xs font-bold text-amber-400 bg-amber-400/10 px-2.5 py-1 rounded border border-amber-400/20" data-i18n="pricing.bundle_price">
+                            買斷永久
+                        </span>
+                    </div>
+                </div>
+
+                <div class="space-y-3.5 text-xs sm:text-sm text-slate-200 border-t border-white/10 pt-6 my-6">
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-emerald-400 text-sm mt-0.5"></i>
+                        <span data-i18n="pricing.bundle_f1"><b>1 組序號同時啟用 2 台裝置</b>（一桌機一筆電，終身隨時自助換機解綁）</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-indigo-400 text-sm mt-0.5"></i>
+                        <span data-i18n="pricing.bundle_f2"><b>KyteView 完整旗艦</b>：微軟 Office 向量預覽、壓縮包單檔拖曳抽出、GPU 4K 硬解</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-sky-400 text-sm mt-0.5"></i>
+                        <span data-i18n="pricing.bundle_f3"><b>KyteShelf 完整旗艦</b>：晃動召喚懸浮置物架、剪貼簿貼入、ZIP 一鍵壓縮打包</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-blue-400 text-sm mt-0.5"></i>
+                        <span data-i18n="pricing.bundle_f4"><b>KyteRename 完整旗艦</b>：雙欄 50ms 零延遲對照、琥珀金正則、EXIF/ID3、安全 DAG 拓撲改名</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-emerald-400 text-sm mt-0.5"></i>
+                        <span data-i18n="pricing.bundle_f5"><b>享有一年內免費維護與 Bug 修復</b>（若未來 OS 大型改版需重構，新版另行販售）</span>
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <a href="https://kytesuite.lemonsqueezy.com/checkout/buy/e2f15337-72b7-438e-8cc4-0dcbdb236816?embed=1&checkout[custom][product_type]=bundle"
+                        class="lemonsqueezy-button w-full py-4 px-6 bg-gradient-to-r from-indigo-500 via-sky-500 to-blue-600 hover:brightness-110 active:scale-98 text-white font-black text-base rounded-2xl shadow-xl shadow-indigo-500/25 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-gem text-amber-300"></i>
+                        <span data-i18n="pricing.btn_bundle">立即購買 Kyte Suite 旗艦全套裝</span>
+                    </a>
+                    <div class="text-[11px] text-slate-400 text-center mt-3 flex items-center justify-center gap-2" data-i18n="pricing.security_sub">
+                        Lemon Squeezy 官方安全交易 · 支援信用卡/多元支付 · 付款後即刻自動發號
+                    </div>
+                </div>
+            </div>
+
+            <!-- 單品分項購買卡片 -->
+            <div class="mt-12 text-center">
+                <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-6" data-i18n="pricing.single_title">
+                    或按需選購單一專業工具：
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                    <!-- 單購 KyteView -->
+                    <div class="p-6 rounded-2xl dark-glass border border-indigo-500/30 flex flex-col justify-between hover:border-indigo-400 transition">
+                        <div class="flex items-center gap-3 mb-4">
+                            <img src="assets/kyteview.png" class="w-10 h-10 rounded-xl" alt="KyteView">
+                            <div>
+                                <h5 class="font-extrabold text-white text-base" data-i18n="pricing.view_name">KyteView 極速預覽</h5>
+                                <span class="text-xs text-indigo-300 font-bold">NT$ 299 / 買斷永久</span>
+                            </div>
+                        </div>
+                        <a href="https://kytesuite.lemonsqueezy.com/checkout/buy/dc31284c-308a-4cd1-8dfd-99023249f1a9?embed=1&checkout[custom][product_type]=kyteview"
+                            class="lemonsqueezy-button w-full py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow-md">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span data-i18n="pricing.btn_view">購買 KyteView (NT$ 299)</span>
+                        </a>
+                    </div>
+
+                    <!-- 單購 KyteShelf -->
+                    <div class="p-6 rounded-2xl dark-glass border border-sky-500/30 flex flex-col justify-between hover:border-sky-400 transition">
+                        <div class="flex items-center gap-3 mb-4">
+                            <img src="assets/kyteshelf.png" class="w-10 h-10 rounded-xl" alt="KyteShelf">
+                            <div>
+                                <h5 class="font-extrabold text-white text-base" data-i18n="pricing.shelf_name">KyteShelf 懸浮置物架</h5>
+                                <span class="text-xs text-sky-300 font-bold">NT$ 399 / 買斷永久</span>
+                            </div>
+                        </div>
+                        <a href="https://kytesuite.lemonsqueezy.com/checkout/buy/461f3030-b622-4ef5-a1f6-f2e73a9968b1?embed=1&checkout[custom][product_type]=kyteshelf"
+                            class="lemonsqueezy-button w-full py-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow-md">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span data-i18n="pricing.btn_shelf">購買 KyteShelf (NT$ 399)</span>
+                        </a>
+                    </div>
+
+                    <!-- 單購 KyteRename -->
+                    <div class="p-6 rounded-2xl dark-glass border border-blue-500/30 flex flex-col justify-between hover:border-blue-400 transition">
+                        <div class="flex items-center gap-3 mb-4">
+                            <img src="assets/kyterename.png" class="w-10 h-10 rounded-xl" alt="KyteRename">
+                            <div>
+                                <h5 class="font-extrabold text-white text-base" data-i18n="pricing.rename_name">KyteRename 批次更名</h5>
+                                <span class="text-xs text-blue-300 font-bold">NT$ 199 / 買斷永久</span>
+                            </div>
+                        </div>
+                        <a href="https://kytesuite.lemonsqueezy.com/checkout/buy/a2c3379f-1b30-4d24-aedc-437e51670559?embed=1&checkout[custom][product_type]=kyterename"
+                            class="lemonsqueezy-button w-full py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow-md">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span data-i18n="pricing.btn_rename">購買 KyteRename (NT$ 199)</span>
+                        </a>
                     </div>
                 </div>
             </div>
