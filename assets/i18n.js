@@ -1,4 +1,4 @@
-/**
+﻿/**
  * assets/i18n.js
  * Kyte Suite 官網中英文多語言字典與動態切換引擎
  */
@@ -7,7 +7,7 @@ const TRANSLATIONS = {
     zh_TW: {
         "page.title": "Kyte Suite - 為 Windows 打造的次世代桌面旗艦效率生態系 | KyteView · KyteShelf · KyteRename",
         "top.announcement_badge": "Kyte Suite 2026",
-        "top.announcement_text": "Windows 次世代旗艦三部曲全線就緒：KyteView v1.5.0 · KyteShelf v1.4.0 · KyteRename v1.1.1",
+        "top.announcement_text": "Windows 次世代旗艦三部曲全線就緒：KyteView v1.5.1 · KyteShelf v1.4.1 · KyteRename v1.1.2",
 
         "nav.suite": "生態三部曲",
         "nav.workflow": "黃金工作流",
@@ -56,7 +56,7 @@ const TRANSLATIONS = {
         "view.feat4": "智慧避讓與 8 向邊緣縮放",
         "view.btn_site": "進入 KyteView 官方首頁",
         "view.btn_guide": "操作指南",
-        "view.btn_installer": "下載安裝版 (v1.5.0)",
+        "view.btn_installer": "下載安裝版 (v1.5.1)",
         "view.btn_portable": "免安裝綠色版",
 
         "shelf.part": "PART 02 · 收集暫存與多向中轉",
@@ -69,7 +69,7 @@ const TRANSLATIONS = {
         "shelf.feat4": "一鍵打包壓縮為 ZIP",
         "shelf.btn_site": "進入 KyteShelf 官方首頁",
         "shelf.btn_guide": "操作指南",
-        "shelf.btn_installer": "下載安裝版 (v1.4.0)",
+        "shelf.btn_installer": "下載安裝版 (v1.4.1)",
         "shelf.btn_portable": "免安裝綠色版",
 
         "rename.part": "PART 03 · 智慧重構與拓撲改名",
@@ -82,7 +82,7 @@ const TRANSLATIONS = {
         "rename.feat4": "Ctrl+Z 快照安全原子還原",
         "rename.btn_site": "進入 KyteRename 官方首頁",
         "rename.btn_guide": "操作指南",
-        "rename.btn_installer": "下載安裝版 (v1.1.1)",
+        "rename.btn_installer": "下載安裝版 (v1.1.2)",
         "rename.btn_portable": "免安裝綠色版",
 
         "workflow.badge": "Seamless Synergy",
@@ -182,7 +182,7 @@ const TRANSLATIONS = {
     en_US: {
         "page.title": "Kyte Suite - The Next-Gen Windows Desktop Productivity Ecosystem | KyteView · KyteShelf · KyteRename",
         "top.announcement_badge": "Kyte Suite 2026",
-        "top.announcement_text": "The Next-Gen Windows Productivity Trio is Ready: KyteView v1.5.0 · KyteShelf v1.4.0 · KyteRename v1.1.1",
+        "top.announcement_text": "The Next-Gen Windows Productivity Trio is Ready: KyteView v1.5.1 · KyteShelf v1.4.1 · KyteRename v1.1.2",
 
         "nav.suite": "The Trio",
         "nav.workflow": "Workflow",
@@ -231,7 +231,7 @@ const TRANSLATIONS = {
         "view.feat4": "Smart offsetting & 8-direction edge resize",
         "view.btn_site": "Visit KyteView Website",
         "view.btn_guide": "User Guide",
-        "view.btn_installer": "Download Installer (v1.5.0)",
+        "view.btn_installer": "Download Installer (v1.5.1)",
         "view.btn_portable": "Portable .zip",
 
         "shelf.part": "PART 02 · Stash, Collect & Multi-target Relay",
@@ -244,7 +244,7 @@ const TRANSLATIONS = {
         "shelf.feat4": "One-click ZIP archive packaging",
         "shelf.btn_site": "Visit KyteShelf Website",
         "shelf.btn_guide": "User Guide",
-        "shelf.btn_installer": "Download Installer (v1.4.0)",
+        "shelf.btn_installer": "Download Installer (v1.4.1)",
         "shelf.btn_portable": "Portable .zip",
 
         "rename.part": "PART 03 · Smart Restructuring & Topological Renaming",
@@ -257,7 +257,7 @@ const TRANSLATIONS = {
         "rename.feat4": "Ctrl+Z atomic snapshot rollback",
         "rename.btn_site": "Visit KyteRename Website",
         "rename.btn_guide": "User Guide",
-        "rename.btn_installer": "Download Installer (v1.1.1)",
+        "rename.btn_installer": "Download Installer (v1.1.2)",
         "rename.btn_portable": "Portable .zip",
 
         "workflow.badge": "Seamless Synergy",
