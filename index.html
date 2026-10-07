@@ -997,15 +997,21 @@
                     </div>
                 </div>
 
-                <div class="pt-2">
-                    <a href="https://kytesuite.lemonsqueezy.com/checkout/buy/e2f15337-72b7-438e-8cc4-0dcbdb236816?embed=1&checkout[custom][product_type]=bundle"
-                        class="lemonsqueezy-button w-full py-4 px-6 bg-gradient-to-r from-indigo-500 via-sky-500 to-blue-600 hover:brightness-110 active:scale-98 text-white font-black text-base rounded-2xl shadow-xl shadow-indigo-500/25 transition flex items-center justify-center gap-2">
+                <div class="pt-2 space-y-3">
+                    <button type="button"
+                        class="btn-trigger-ecpay w-full py-4 px-6 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-600 hover:brightness-110 active:scale-98 text-white font-black text-base rounded-2xl shadow-xl shadow-emerald-500/25 transition flex items-center justify-center gap-2 cursor-pointer"
+                        data-product="bundle" data-name="Kyte Suite 旗艦三部曲全套裝" data-price="699">
                         <i class="fa-solid fa-gem text-amber-300"></i>
-                        <span data-i18n="pricing.btn_bundle">立即購買 Kyte Suite 旗艦全套裝</span>
+                        <span>綠界科技安全購買 (NT$ 699) · 信用卡/ATM/超商</span>
+                    </button>
+                    <a href="https://kytesuite.lemonsqueezy.com/checkout/buy/e2f15337-72b7-438e-8cc4-0dcbdb236816?embed=1&checkout[custom][product_type]=bundle"
+                        class="lemonsqueezy-button w-full py-2.5 px-6 bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-slate-300 hover:text-white font-bold text-xs rounded-xl transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-globe text-slate-400"></i>
+                        <span data-i18n="pricing.btn_bundle">Lemon Squeezy 國際支付通道 (USD / 信用卡)</span>
                     </a>
-                    <div class="text-[11px] text-slate-400 text-center mt-3 flex items-center justify-center gap-2"
+                    <div class="text-[11px] text-slate-400 text-center mt-1 flex items-center justify-center gap-2"
                         data-i18n="pricing.security_sub">
-                        Lemon Squeezy 官方安全交易 · 支援信用卡/多元支付 · 付款後即刻自動發號
+                        綠界科技 / Lemon Squeezy 官方安全交易 · 付款後即刻自動發送三套序號
                     </div>
                 </div>
             </div>
@@ -1028,11 +1034,19 @@
                                 <span class="text-xs text-indigo-300 font-bold">NT$ 299 / 買斷永久</span>
                             </div>
                         </div>
-                        <a href="https://kytesuite.lemonsqueezy.com/checkout/buy/dc31284c-308a-4cd1-8dfd-99023249f1a9?embed=1&checkout[custom][product_type]=kyteview"
-                            class="lemonsqueezy-button w-full py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow-md">
-                            <i class="fa-solid fa-bolt"></i>
-                            <span data-i18n="pricing.btn_view">購買 KyteView (NT$ 299)</span>
-                        </a>
+                        <div class="space-y-2 mt-auto">
+                            <button type="button"
+                                class="btn-trigger-ecpay w-full py-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow-md cursor-pointer"
+                                data-product="kyteview" data-name="KyteView 專業版終身授權" data-price="299">
+                                <i class="fa-solid fa-credit-card"></i>
+                                <span>綠界購買 (NT$ 299)</span>
+                            </button>
+                            <a href="https://kytesuite.lemonsqueezy.com/checkout/buy/dc31284c-308a-4cd1-8dfd-99023249f1a9?embed=1&checkout[custom][product_type]=kyteview"
+                                class="lemonsqueezy-button w-full py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-400 hover:text-white font-medium rounded-lg text-[11px] transition flex items-center justify-center gap-1">
+                                <i class="fa-solid fa-globe"></i>
+                                <span>Lemon Squeezy (USD)</span>
+                            </a>
+                        </div>
                     </div>
 
                     <!-- 單購 KyteShelf -->
@@ -1046,11 +1060,19 @@
                                 <span class="text-xs text-sky-300 font-bold">NT$ 399 / 買斷永久</span>
                             </div>
                         </div>
-                        <a href="https://kytesuite.lemonsqueezy.com/checkout/buy/461f3030-b622-4ef5-a1f6-f2e73a9968b1?embed=1&checkout[custom][product_type]=kyteshelf"
-                            class="lemonsqueezy-button w-full py-2.5 bg-sky-600 hover:bg-sky-500 text-white font-bold rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow-md">
-                            <i class="fa-solid fa-bolt"></i>
-                            <span data-i18n="pricing.btn_shelf">購買 KyteShelf (NT$ 399)</span>
-                        </a>
+                        <div class="space-y-2 mt-auto">
+                            <button type="button"
+                                class="btn-trigger-ecpay w-full py-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow-md cursor-pointer"
+                                data-product="kyteshelf" data-name="KyteShelf 旗艦版終身授權" data-price="399">
+                                <i class="fa-solid fa-credit-card"></i>
+                                <span>綠界購買 (NT$ 399)</span>
+                            </button>
+                            <a href="https://kytesuite.lemonsqueezy.com/checkout/buy/461f3030-b622-4ef5-a1f6-f2e73a9968b1?embed=1&checkout[custom][product_type]=kyteshelf"
+                                class="lemonsqueezy-button w-full py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-400 hover:text-white font-medium rounded-lg text-[11px] transition flex items-center justify-center gap-1">
+                                <i class="fa-solid fa-globe"></i>
+                                <span>Lemon Squeezy (USD)</span>
+                            </a>
+                        </div>
                     </div>
 
                     <!-- 單購 KyteRename -->
@@ -1064,11 +1086,19 @@
                                 <span class="text-xs text-blue-300 font-bold">NT$ 199 / 買斷永久</span>
                             </div>
                         </div>
-                        <a href="https://kytesuite.lemonsqueezy.com/checkout/buy/a2c3379f-1b30-4d24-aedc-437e51670559?embed=1&checkout[custom][product_type]=kyterename"
-                            class="lemonsqueezy-button w-full py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow-md">
-                            <i class="fa-solid fa-bolt"></i>
-                            <span data-i18n="pricing.btn_rename">購買 KyteRename (NT$ 199)</span>
-                        </a>
+                        <div class="space-y-2 mt-auto">
+                            <button type="button"
+                                class="btn-trigger-ecpay w-full py-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow-md cursor-pointer"
+                                data-product="kyterename" data-name="KyteRename 專業版終身授權" data-price="199">
+                                <i class="fa-solid fa-credit-card"></i>
+                                <span>綠界購買 (NT$ 199)</span>
+                            </button>
+                            <a href="https://kytesuite.lemonsqueezy.com/checkout/buy/a2c3379f-1b30-4d24-aedc-437e51670559?embed=1&checkout[custom][product_type]=kyterename"
+                                class="lemonsqueezy-button w-full py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-400 hover:text-white font-medium rounded-lg text-[11px] transition flex items-center justify-center gap-1">
+                                <i class="fa-solid fa-globe"></i>
+                                <span>Lemon Squeezy (USD)</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1191,6 +1221,116 @@
         </div>
     </footer>
 
+    <!-- 綠界結帳彈窗 (ECPay Modal) -->
+    <div id="ecpay-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-slate-950/75 backdrop-blur-sm p-4 transition-opacity duration-300">
+        <div class="bg-slate-900 border border-slate-700/80 rounded-3xl max-w-md w-full p-6 sm:p-7 shadow-2xl relative text-left text-slate-200">
+            <!-- 關閉按鈕 -->
+            <button id="btn-close-ecpay-modal" type="button" class="absolute top-5 right-5 text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition cursor-pointer">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <!-- 標題與圖示 -->
+            <div class="flex items-center gap-3 mb-5">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-black text-white">綠界科技 ECPay 安全結帳</h3>
+                    <p class="text-xs text-slate-400">支援台灣信用卡、ATM 虛擬帳號、超商代碼繳費</p>
+                </div>
+            </div>
+
+            <!-- 訂單明細摘要 -->
+            <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-4 mb-5">
+                <div class="flex items-center justify-between text-xs text-slate-400 mb-1.5">
+                    <span>購買項目</span>
+                    <span id="ecpay-modal-item-name" class="font-bold text-slate-200">Kyte Suite 旗艦三部曲全套裝</span>
+                </div>
+                <div class="flex items-center justify-between text-xs text-slate-400">
+                    <span>結帳金額</span>
+                    <span id="ecpay-modal-item-price" class="text-lg font-black text-emerald-400">NT$ 699</span>
+                </div>
+            </div>
+
+            <!-- 結帳表單 (送往 Cloudflare Worker API) -->
+            <form id="ecpay-form-trigger" method="POST" action="https://kyteshelf-license.ais7896.workers.dev/api/ecpay/checkout" class="space-y-4">
+                <input type="hidden" id="ecpay-modal-product-input" name="product" value="bundle">
+                <div>
+                    <label for="ecpay-buyer-email" class="block text-xs font-bold text-slate-300 mb-1.5 flex items-center justify-between">
+                        <span>接收授權序號的 Email 信箱</span>
+                        <span class="text-[10px] text-emerald-400 font-semibold">*必填</span>
+                    </label>
+                    <div class="relative">
+                        <i class="fa-solid fa-envelope absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-xs"></i>
+                        <input type="email" id="ecpay-buyer-email" name="email" required placeholder="例如：yourname@gmail.com"
+                            class="w-full pl-9 pr-4 py-3 bg-slate-800/90 border border-slate-700 rounded-xl text-white placeholder-slate-500 text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition">
+                    </div>
+                    <p class="text-[11px] text-slate-400 mt-1.5 leading-relaxed">
+                        付款完成後，系統將會在 1 分鐘內將您的正式版序號與安裝教學寄至此信箱。
+                    </p>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" id="btn-submit-ecpay"
+                        class="w-full py-3.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 active:scale-95 text-white font-black rounded-xl shadow-lg shadow-emerald-950/50 transition flex items-center justify-center gap-2 cursor-pointer">
+                        <span>前往綠界安全付款</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+
+                <div class="flex items-center justify-center gap-4 text-[10px] text-slate-500 pt-1">
+                    <span class="flex items-center gap-1"><i class="fa-solid fa-lock text-emerald-400"></i> 256-bit SSL 加密</span>
+                    <span class="flex items-center gap-1"><i class="fa-solid fa-bolt text-amber-400"></i> 即時自動發號</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // 綠界 ECPay 結帳彈窗互動控制 (支援單品與三合一套裝)
+        const ecpayModal = document.getElementById('ecpay-modal');
+        const closeEcpayBtn = document.getElementById('btn-close-ecpay-modal');
+        const ecpayProductInput = document.getElementById('ecpay-modal-product-input');
+        const ecpayNameEl = document.getElementById('ecpay-modal-item-name');
+        const ecpayPriceEl = document.getElementById('ecpay-modal-item-price');
+
+        document.querySelectorAll('.btn-trigger-ecpay').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const product = btn.dataset.product || 'bundle';
+                const name = btn.dataset.name || 'Kyte Suite 旗艦三部曲全套裝';
+                const price = btn.dataset.price || '699';
+
+                if (ecpayProductInput) ecpayProductInput.value = product;
+                if (ecpayNameEl) ecpayNameEl.textContent = name;
+                if (ecpayPriceEl) ecpayPriceEl.textContent = 'NT$ ' + price;
+
+                if (ecpayModal) {
+                    ecpayModal.classList.remove('hidden');
+                    const emailInput = document.getElementById('ecpay-buyer-email');
+                    if (emailInput) setTimeout(() => emailInput.focus(), 100);
+                }
+            });
+        });
+
+        if (closeEcpayBtn && ecpayModal) {
+            closeEcpayBtn.addEventListener('click', () => {
+                ecpayModal.classList.add('hidden');
+            });
+        }
+
+        if (ecpayModal) {
+            ecpayModal.addEventListener('click', (e) => {
+                if (e.target === ecpayModal) {
+                    ecpayModal.classList.add('hidden');
+                }
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !ecpayModal.classList.contains('hidden')) {
+                    ecpayModal.classList.add('hidden');
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
