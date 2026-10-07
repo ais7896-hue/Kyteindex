@@ -7,8 +7,8 @@ const TRANSLATIONS = {
     zh_TW: {
         "page.title": "Kyte Suite - 為 Windows 打造的次世代桌面旗艦效率生態系 | KyteView · KyteShelf · KyteRename",
         "top.announcement_badge": "Kyte Suite 2026",
-        "top.announcement_text": "Windows 次世代旗艦三部曲全線就緒：KyteView v1.5.0 · KyteShelf v1.4.0 · KyteRename v1.1.0",
-        
+        "top.announcement_text": "Windows 次世代旗艦三部曲全線就緒：KyteView v1.5.0 · KyteShelf v1.4.0 · KyteRename v1.1.1",
+
         "nav.suite": "生態三部曲",
         "nav.workflow": "黃金工作流",
         "nav.matrix": "規格對照",
@@ -82,7 +82,7 @@ const TRANSLATIONS = {
         "rename.feat4": "Ctrl+Z 快照安全原子還原",
         "rename.btn_site": "進入 KyteRename 官方首頁",
         "rename.btn_guide": "操作指南",
-        "rename.btn_installer": "下載安裝版 (v1.1.0)",
+        "rename.btn_installer": "下載安裝版 (v1.1.1)",
         "rename.btn_portable": "免安裝綠色版",
 
         "workflow.badge": "Seamless Synergy",
@@ -182,8 +182,8 @@ const TRANSLATIONS = {
     en_US: {
         "page.title": "Kyte Suite - The Next-Gen Windows Desktop Productivity Ecosystem | KyteView · KyteShelf · KyteRename",
         "top.announcement_badge": "Kyte Suite 2026",
-        "top.announcement_text": "The Next-Gen Windows Productivity Trio is Ready: KyteView v1.5.0 · KyteShelf v1.4.0 · KyteRename v1.1.0",
-        
+        "top.announcement_text": "The Next-Gen Windows Productivity Trio is Ready: KyteView v1.5.0 · KyteShelf v1.4.0 · KyteRename v1.1.1",
+
         "nav.suite": "The Trio",
         "nav.workflow": "Workflow",
         "nav.matrix": "Specifications",
@@ -257,7 +257,7 @@ const TRANSLATIONS = {
         "rename.feat4": "Ctrl+Z atomic snapshot rollback",
         "rename.btn_site": "Visit KyteRename Website",
         "rename.btn_guide": "User Guide",
-        "rename.btn_installer": "Download Installer (v1.1.0)",
+        "rename.btn_installer": "Download Installer (v1.1.1)",
         "rename.btn_portable": "Portable .zip",
 
         "workflow.badge": "Seamless Synergy",
