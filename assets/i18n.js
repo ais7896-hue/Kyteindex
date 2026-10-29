@@ -174,7 +174,7 @@ const TRANSLATIONS = {
         "footer.view_site": "KyteView 官網",
         "footer.shelf_site": "KyteShelf 官網",
         "footer.rename_site": "KyteRename 官網",
-        "footer.affiliates": "Affiliates / 成為推廣夥伴（賺取 40% 分潤）",
+        "footer.affiliates": "成為推廣夥伴（賺取 40% 分潤）",
         "footer.terms": "服務條款",
         "footer.privacy_policy": "隱私權政策",
         "footer.support": "支援信箱",
