@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="shelfTileGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe" />
+      <stop offset="40%" stop-color="#bae6fd" />
+      <stop offset="100%" stop-color="#7dd3fc" />
+    </linearGradient>
+    <linearGradient id="shelfGloss" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+    <filter id="shelfTileShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="24" stdDeviation="32" flood-color="#0369a1" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Ice Glass Squircle -->
+  <rect x="96" y="96" width="832" height="832" rx="210" ry="210" fill="url(#shelfTileGrad)" filter="url(#shelfTileShadow)" />
+  <rect x="96" y="96" width="832" height="416" rx="210" ry="210" fill="url(#shelfGloss)" />
+  <rect x="96" y="96" width="832" height="832" rx="210" ry="210" fill="none" stroke="#ffffff" stroke-width="6" />
+
+  <!-- Core Shelf & Staging Document -->
+  
+  <defs>
+    <linearGradient id="shelfGlassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bae6fd" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#7dd3fc" stop-opacity="0.65" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.85" />
+    </linearGradient>
+    <linearGradient id="shelfBaseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <linearGradient id="docGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+    <filter id="shelfShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#0284c7" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <g id="shelfCore" filter="url(#shelfShadow)">
+    <!-- Base White Rounded Plinth / Pedestal -->
+    <path d="M260 670 L512 790 L764 670 L764 740 L512 860 L260 740 Z" fill="#cbd5e1" opacity="0.6" />
+    <path d="M260 670 Q240 660 260 650 L490 540 Q512 530 534 540 L764 650 Q784 660 764 670 L534 780 Q512 790 490 780 Z" fill="url(#shelfBaseGrad)" stroke="#ffffff" stroke-width="4" />
+
+    <!-- Lower Glass Tray -->
+    <path d="M270 520 Q250 510 270 500 L490 395 Q512 385 534 395 L754 500 Q774 510 754 520 L534 625 Q512 635 490 625 Z" fill="url(#shelfGlassGrad)" stroke="#e0f2fe" stroke-width="8" />
+    <path d="M270 520 L270 550 Q250 560 270 570 L490 675 Q512 685 534 675 L754 570 Q774 560 754 550 L754 520 L534 625 Q512 635 490 625 Z" fill="#0284c7" fill-opacity="0.4" stroke="#38bdf8" stroke-width="4" />
+
+    <!-- Upper Glass Shelf / Partition Frame -->
+    <path d="M270 360 Q250 350 270 340 L490 235 Q512 225 534 235 L754 340 Q774 350 754 360 L534 465 Q512 475 490 465 Z" fill="url(#shelfGlassGrad)" stroke="#ffffff" stroke-width="8" />
+    <path d="M270 360 L270 390 L512 505 L754 390 L754 360 L512 475 Z" fill="#0369a1" fill-opacity="0.35" stroke="#bae6fd" stroke-width="4" />
+
+    <!-- Vertical Glass Pillars / Sidewalls -->
+    <path d="M270 350 Q250 360 270 510" fill="none" stroke="#bae6fd" stroke-width="12" stroke-linecap="round" />
+    <path d="M754 350 Q774 360 754 510" fill="none" stroke="#bae6fd" stroke-width="12" stroke-linecap="round" />
+
+    <!-- Staging File / Document with Folded Corner -->
+    <g id="stagingDoc" transform="translate(427, 210)">
+      <!-- Document Body -->
+      <path d="M 0 35 Q 0 0 35 0 L 110 0 L 170 60 L 170 205 Q 170 240 135 240 L 35 240 Q 0 240 0 205 Z" fill="url(#docGrad)" stroke="#bae6fd" stroke-width="5" />
+      <!-- Folded Corner -->
+      <path d="M 110 0 L 110 50 Q 110 60 120 60 L 170 60 Z" fill="#e2e8f0" stroke="#bae6fd" stroke-width="4" />
+      <!-- Downward Arrow (Drop / Stash Action) -->
+      <path d="M 85 95 L 85 160 M 60 140 L 85 165 L 110 140" fill="none" stroke="#0284c7" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+  </g>
+
+</svg>

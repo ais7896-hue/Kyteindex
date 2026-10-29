@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="darkGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="45%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="specularGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25" />
+      <stop offset="30%" stop-color="#818cf8" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </linearGradient>
+    <filter id="iconShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="24" stdDeviation="32" flood-color="#020617" flood-opacity="0.75" />
+    </filter>
+  </defs>
+
+  <!-- Dark Mica Squircle -->
+  <rect x="96" y="96" width="832" height="832" rx="210" ry="210" fill="url(#darkGlass)" filter="url(#iconShadow)" />
+  <rect x="96" y="96" width="832" height="832" rx="210" ry="210" fill="url(#specularGlow)" />
+  <rect x="96" y="96" width="832" height="832" rx="210" ry="210" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="4" />
+
+  <!-- Core Diamond Aperture Symbol -->
+  
+  <defs>
+    <linearGradient id="viewCyanIndigo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <linearGradient id="viewFacetTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.4" />
+    </linearGradient>
+    <linearGradient id="viewFacetRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.85" />
+    </linearGradient>
+    <linearGradient id="viewFacetBottom" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.9" />
+    </linearGradient>
+    <linearGradient id="viewFacetLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.5" />
+    </linearGradient>
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g id="diamondAperture" filter="url(#neonGlow)" transform="rotate(-18 512 512)">
+    <!-- Outer Rhombus / Diamond Prism Shell -->
+    <!-- Top-Left Facet -->
+    <polygon points="512,140 370,330 512,300" fill="url(#viewFacetTop)" stroke="#38bdf8" stroke-width="10" stroke-linejoin="round" />
+    <polygon points="512,140 370,330 210,512" fill="url(#viewFacetLeft)" stroke="#38bdf8" stroke-width="10" stroke-linejoin="round" />
+    
+    <!-- Top-Right Facet -->
+    <polygon points="512,140 654,330 512,300" fill="url(#viewFacetTop)" stroke="#818cf8" stroke-width="10" stroke-linejoin="round" />
+    <polygon points="512,140 654,330 814,512" fill="url(#viewFacetRight)" stroke="#c084fc" stroke-width="10" stroke-linejoin="round" />
+
+    <!-- Bottom-Left Facet -->
+    <polygon points="210,512 370,694 512,724" fill="url(#viewFacetLeft)" stroke="#38bdf8" stroke-width="10" stroke-linejoin="round" />
+    <polygon points="210,512 370,694 512,884" fill="url(#viewFacetBottom)" stroke="#818cf8" stroke-width="10" stroke-linejoin="round" />
+
+    <!-- Bottom-Right Facet -->
+    <polygon points="814,512 654,694 512,724" fill="url(#viewFacetRight)" stroke="#c084fc" stroke-width="10" stroke-linejoin="round" />
+    <polygon points="814,512 654,694 512,884" fill="url(#viewFacetBottom)" stroke="#a855f7" stroke-width="10" stroke-linejoin="round" />
+
+    <!-- Outer Hex-Prism Ribs -->
+    <polygon points="370,330 654,330 814,512 654,694 370,694 210,512" fill="none" stroke="#60a5fa" stroke-width="8" opacity="0.6" />
+
+    <!-- Outer Aperture Ring -->
+    <circle cx="512" cy="512" r="195" fill="none" stroke="url(#viewCyanIndigo)" stroke-width="14" />
+    <circle cx="512" cy="512" r="165" fill="#0f172a" fill-opacity="0.88" stroke="url(#viewCyanIndigo)" stroke-width="8" />
+
+    <!-- 6 Camera Shutter Blades (Aperture Iris) -->
+    <!-- Blade 1 -->
+    <path d="M512 347 A 165 165 0 0 1 655 430 L 555 490 A 65 65 0 0 0 490 447 Z" fill="#38bdf8" fill-opacity="0.92" stroke="#e0f2fe" stroke-width="4" />
+    <!-- Blade 2 -->
+    <path d="M655 430 A 165 165 0 0 1 655 594 L 540 550 A 65 65 0 0 0 555 490 Z" fill="#60a5fa" fill-opacity="0.92" stroke="#e0f2fe" stroke-width="4" />
+    <!-- Blade 3 -->
+    <path d="M655 594 A 165 165 0 0 1 512 677 L 470 565 A 65 65 0 0 0 540 550 Z" fill="#818cf8" fill-opacity="0.92" stroke="#e0f2fe" stroke-width="4" />
+    <!-- Blade 4 -->
+    <path d="M512 677 A 165 165 0 0 1 369 594 L 470 535 A 65 65 0 0 0 470 565 Z" fill="#a855f7" fill-opacity="0.92" stroke="#f3e8ff" stroke-width="4" />
+    <!-- Blade 5 -->
+    <path d="M369 594 A 165 165 0 0 1 369 430 L 485 475 A 65 65 0 0 0 470 535 Z" fill="#c084fc" fill-opacity="0.92" stroke="#f3e8ff" stroke-width="4" />
+    <!-- Blade 6 -->
+    <path d="M369 430 A 165 165 0 0 1 512 347 L 555 460 A 65 65 0 0 0 485 475 Z" fill="#38bdf8" fill-opacity="0.92" stroke="#e0f2fe" stroke-width="4" />
+
+    <!-- Dark Pupil Aperture Center -->
+    <circle cx="512" cy="512" r="54" fill="#030712" stroke="#38bdf8" stroke-width="6" />
+  </g>
+
+</svg>
