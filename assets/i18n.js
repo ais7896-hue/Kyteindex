@@ -7,7 +7,7 @@ const TRANSLATIONS = {
     zh_TW: {
         "page.title": "Kyte Suite - 為 Windows 打造的次世代桌面旗艦效率生態系 | KyteView · KyteShelf · KyteRename",
         "top.announcement_badge": "Kyte Suite 2026",
-        "top.announcement_text": "Windows 次世代旗艦三部曲全線就緒：KyteView v1.5.2 · KyteShelf v1.4.3 · KyteRename v1.1.3",
+        "top.announcement_text": "Windows 次世代旗艦三部曲全線就緒：KyteView v1.5.3 · KyteShelf v1.4.3 · KyteRename v1.1.3",
 
         "nav.suite": "生態三部曲",
         "nav.workflow": "黃金工作流",
@@ -56,7 +56,7 @@ const TRANSLATIONS = {
         "view.feat4": "智慧避讓與 8 向邊緣縮放",
         "view.btn_site": "進入 KyteView 官方首頁",
         "view.btn_guide": "操作指南",
-        "view.btn_installer": "下載安裝版 (v1.5.2)",
+        "view.btn_installer": "下載安裝版 (v1.5.3)",
         "view.btn_portable": "免安裝綠色版",
 
         "shelf.part": "PART 02 · 收集暫存與多向中轉",
@@ -183,7 +183,7 @@ const TRANSLATIONS = {
     en_US: {
         "page.title": "Kyte Suite - The Next-Gen Windows Desktop Productivity Ecosystem | KyteView · KyteShelf · KyteRename",
         "top.announcement_badge": "Kyte Suite 2026",
-        "top.announcement_text": "The Next-Gen Windows Productivity Trio is Ready: KyteView v1.5.2 · KyteShelf v1.4.3 · KyteRename v1.1.3",
+        "top.announcement_text": "The Next-Gen Windows Productivity Trio is Ready: KyteView v1.5.3 · KyteShelf v1.4.3 · KyteRename v1.1.3",
 
         "nav.suite": "The Trio",
         "nav.workflow": "Workflow",
@@ -232,7 +232,7 @@ const TRANSLATIONS = {
         "view.feat4": "Smart offsetting & 8-direction edge resize",
         "view.btn_site": "Visit KyteView Website",
         "view.btn_guide": "User Guide",
-        "view.btn_installer": "Download Installer (v1.5.2)",
+        "view.btn_installer": "Download Installer (v1.5.3)",
         "view.btn_portable": "Portable .zip",
 
         "shelf.part": "PART 02 · Stash, Collect & Multi-target Relay",
