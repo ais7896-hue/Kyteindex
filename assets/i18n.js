@@ -58,6 +58,7 @@ const TRANSLATIONS = {
         "view.btn_guide": "操作指南",
         "view.btn_installer": "下載安裝版 (v1.5.3)",
         "view.btn_portable": "免安裝綠色版",
+        "view.btn_msstore": "Microsoft Store (審核中)",
 
         "shelf.part": "PART 02 · 收集暫存與多向中轉",
         "shelf.name": "KyteShelf",
@@ -71,6 +72,7 @@ const TRANSLATIONS = {
         "shelf.btn_guide": "操作指南",
         "shelf.btn_installer": "下載安裝版 (v1.4.3)",
         "shelf.btn_portable": "免安裝綠色版",
+        "shelf.btn_msstore": "Microsoft Store (審核中)",
 
         "rename.part": "PART 03 · 智慧重構與拓撲改名",
         "rename.name": "KyteRename",
@@ -84,6 +86,7 @@ const TRANSLATIONS = {
         "rename.btn_guide": "操作指南",
         "rename.btn_installer": "下載安裝版 (v1.1.3)",
         "rename.btn_portable": "免安裝綠色版",
+        "rename.btn_msstore": "Microsoft Store (審核中)",
 
         "workflow.badge": "Seamless Synergy",
         "workflow.title": "三位一體：無縫串聯的桌面工作流",
@@ -127,6 +130,7 @@ const TRANSLATIONS = {
         "downloads.stable": "穩定版",
         "downloads.installer": "下載 Windows 安裝版",
         "downloads.portable": "下載免安裝綠色版 (Portable .zip)",
+        "downloads.msstore": "Microsoft Store (審核中)",
         "downloads.site": "產品官網",
         "downloads.guide": "操作指南",
         "downloads.view_desc": "Windows 空白鍵快速預覽。免開 Office 預覽、4K 影音預播、隨選文字抽取。",
@@ -234,6 +238,7 @@ const TRANSLATIONS = {
         "view.btn_guide": "User Guide",
         "view.btn_installer": "Download Installer (v1.5.3)",
         "view.btn_portable": "Portable .zip",
+        "view.btn_msstore": "Microsoft Store (In Review)",
 
         "shelf.part": "PART 02 · Stash, Collect & Multi-target Relay",
         "shelf.name": "KyteShelf",
@@ -247,6 +252,7 @@ const TRANSLATIONS = {
         "shelf.btn_guide": "User Guide",
         "shelf.btn_installer": "Download Installer (v1.4.3)",
         "shelf.btn_portable": "Portable .zip",
+        "shelf.btn_msstore": "Microsoft Store (In Review)",
 
         "rename.part": "PART 03 · Smart Restructuring & Topological Renaming",
         "rename.name": "KyteRename",
@@ -260,6 +266,7 @@ const TRANSLATIONS = {
         "rename.btn_guide": "User Guide",
         "rename.btn_installer": "Download Installer (v1.1.3)",
         "rename.btn_portable": "Portable .zip",
+        "rename.btn_msstore": "Microsoft Store (In Review)",
 
         "workflow.badge": "Seamless Synergy",
         "workflow.title": "Triad Harmony: The Frictionless Desktop Flow",
@@ -303,6 +310,7 @@ const TRANSLATIONS = {
         "downloads.stable": "Stable Release",
         "downloads.installer": "Download Windows Setup",
         "downloads.portable": "Download Portable (.zip)",
+        "downloads.msstore": "Microsoft Store (In Review)",
         "downloads.site": "Website",
         "downloads.guide": "User Guide",
         "downloads.view_desc": "Windows spacebar fast preview. Peek Office docs, 4K video playback, and selective text extraction.",
@@ -410,3 +418,21 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleBtn.addEventListener('click', toggleLanguage);
     }
 });
+// Microsoft Store 上架開關：審核通過後改為 true 即可全站啟用商店下載按鈕
+const MS_STORE_LIVE = false;
+function updateMsStoreButtons(lang) {
+    const isEn = lang === 'en_US';
+    document.querySelectorAll('.ms-store-btn').forEach(btn => {
+        const url = btn.getAttribute('data-store-url');
+        const span = btn.querySelector('[data-i18n]');
+        if (MS_STORE_LIVE && url) {
+            btn.href = url;
+            btn.target = '_blank';
+            btn.rel = 'noopener noreferrer';
+            btn.classList.remove('opacity-80', 'cursor-not-allowed');
+            btn.classList.add('hover:scale-105');
+            if (span) span.textContent = isEn ? 'Get it from Microsoft' : 'Microsoft Store 下載';
+        }
+    });
+}
+document.addEventListener('DOMContentLoaded', () => updateMsStoreButtons(typeof currentLang !== 'undefined' ? currentLang : 'zh_TW'));
