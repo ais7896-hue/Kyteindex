@@ -15,6 +15,7 @@ const TRANSLATIONS = {
         "nav.downloads": "下載中心",
         "nav.pricing": "授權方案",
         "nav.faq": "常見問答",
+        "nav.blog": "技術專欄",
         "nav.all_downloads": "全系列下載",
         "nav.buy_bundle": "購買套裝",
 
@@ -195,6 +196,7 @@ const TRANSLATIONS = {
         "nav.downloads": "Downloads",
         "nav.pricing": "Pricing",
         "nav.faq": "FAQ",
+        "nav.blog": "Blog",
         "nav.all_downloads": "Download All",
         "nav.buy_bundle": "Get Bundle",
 

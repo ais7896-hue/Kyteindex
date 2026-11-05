@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Kyte Suite Blog</title>
+    <link>https://kyteindex.aisming.com/blog/</link>
+    <description>Kyte Suite 官方效率專欄：整合 KyteView 極速預覽、KyteShelf 懸浮暫存架與 KyteRename 智慧批次改名，打造次世代 Windows 10/11 桌面工作流。</description>
+    <language>zh-tw</language>
+    <item>
+      <title>2026 Windows 10/11 檔案管理效率革命：預覽、暫存、批次改名黃金三部曲</title>
+      <link>https://kyteindex.aisming.com/blog/windows-11-file-management-productivity-workflow.html</link>
+      <guid>https://kyteindex.aisming.com/blog/windows-11-file-management-productivity-workflow.html</guid>
+      <pubDate>2026-11-05</pubDate>
+      <description>每天在 Windows 檔案總管花費大量時間找檔案、開軟體、搬資料夾與手動改名？結合 KyteView、KyteShelf 與 KyteRename，打造毫秒級無縫串聯的現代桌面工作流。</description>
+    </item>
+    <item>
+      <title>為什麼專業工作者正在回歸 100% 純本機離線工具？零雲端上傳的效率與資安優勢</title>
+      <link>https://kyteindex.aisming.com/blog/local-offline-windows-utilities-privacy-security.html</link>
+      <guid>https://kyteindex.aisming.com/blog/local-offline-windows-utilities-privacy-security.html</guid>
+      <pubDate>2026-11-05</pubDate>
+      <description>在雲端訂閱制與強制聯網軟體氾濫的時代，純本機離線運作的桌面工具不僅帶來毫秒級零延遲反應，更能確保企業合約、財務報表與個人相片 100% 不外洩。</description>
+    </item>
+  </channel>
+</rss>
