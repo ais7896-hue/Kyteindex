@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Kyte Suite Blog (EN)</title>
+    <link>https://kyteindex.aisming.com/blog/en/</link>
+    <description>Kyte Suite Official Blog: Unifying KyteView spacebar preview, KyteShelf floating staging shelf, and KyteRename batch renaming for next-gen Windows 10/11 productivity.</description>
+    <language>en-us</language>
+    <item>
+      <title>The 2026 Windows 10/11 File Management Revolution: Preview, Stash &amp; Batch Rename Trio</title>
+      <link>https://kyteindex.aisming.com/blog/en/windows-11-file-management-productivity-workflow.html</link>
+      <guid>https://kyteindex.aisming.com/blog/en/windows-11-file-management-productivity-workflow.html</guid>
+      <pubDate>2026-11-05</pubDate>
+      <description>Spending too much time waiting for heavy apps to open, tiling Explorer windows to drag files, and renaming files manually? Discover how KyteView, KyteShelf, and KyteRename unite via sub-millisecond IPC.</description>
+    </item>
+    <item>
+      <title>Why Professionals Are Returning to 100% Local Offline Windows Utilities</title>
+      <link>https://kyteindex.aisming.com/blog/en/local-offline-windows-utilities-privacy-security.html</link>
+      <guid>https://kyteindex.aisming.com/blog/en/local-offline-windows-utilities-privacy-security.html</guid>
+      <pubDate>2026-11-05</pubDate>
+      <description>In an era of cloud-mandatory subscriptions, 100% local offline desktop utilities deliver sub-50ms hardware speed while keeping confidential contracts, financial spreadsheets, and personal photos strictly on your machine.</description>
+    </item>
+  </channel>
+</rss>
